@@ -1,0 +1,381 @@
+MatchID,Season,Date,Kickoff,Matchday,HomeTeam,AwayTeam,FTHG,FTAG,FTR,Status,HomeCrest,AwayCrest
+560542,2026-27,2026-08-21,2026-08-21T19:00:00Z,1,Arsenal,Coventry,3.0,0.0,H,FINISHED,https://crests.football-data.org/57.png,https://crests.football-data.org/1076.png
+560543,2026-27,2026-08-22,2026-08-22T11:30:00Z,1,Hull,Man United,2.0,0.0,H,FINISHED,https://crests.football-data.org/322.png,https://crests.football-data.org/66.png
+560544,2026-27,2026-08-22,2026-08-22T14:00:00Z,1,Ipswich,Sunderland,2.0,1.0,H,FINISHED,https://crests.football-data.org/349.png,https://crests.football-data.org/71.png
+560545,2026-27,2026-08-22,2026-08-22T14:00:00Z,1,Nott'm Forest,Leeds,0.0,1.0,A,FINISHED,https://crests.football-data.org/351.png,https://crests.football-data.org/341.png
+560546,2026-27,2026-08-22,2026-08-22T14:00:00Z,1,Everton,Crystal Palace,2.0,0.0,H,FINISHED,https://crests.football-data.org/62.png,https://crests.football-data.org/354.png
+560547,2026-27,2026-08-22,2026-08-22T16:30:00Z,1,Brentford,Tottenham,3.0,0.0,H,FINISHED,https://crests.football-data.org/402.png,https://crests.football-data.org/73.png
+560548,2026-27,2026-08-23,2026-08-23T13:00:00Z,1,Man City,Bournemouth,2.0,1.0,H,FINISHED,https://crests.football-data.org/65.png,https://crests.football-data.org/bournemouth.png
+560549,2026-27,2026-08-23,2026-08-23T13:00:00Z,1,Brighton,Aston Villa,4.0,0.0,H,FINISHED,https://crests.football-data.org/397.png,https://crests.football-data.org/58.png
+560550,2026-27,2026-08-23,2026-08-23T15:30:00Z,1,Newcastle,Liverpool,2.0,2.0,D,FINISHED,https://crests.football-data.org/67.png,https://crests.football-data.org/64.png
+560551,2026-27,2026-08-24,2026-08-24T19:00:00Z,1,Fulham,Chelsea,2.0,3.0,A,FINISHED,https://crests.football-data.org/63.png,https://crests.football-data.org/61.png
+560555,2026-27,2026-08-28,2026-08-28T19:00:00Z,2,Crystal Palace,Man City,1.0,4.0,A,FINISHED,https://crests.football-data.org/354.png,https://crests.football-data.org/65.png
+560552,2026-27,2026-08-29,2026-08-29T11:30:00Z,2,Liverpool,Nott'm Forest,2.0,2.0,D,FINISHED,https://crests.football-data.org/64.png,https://crests.football-data.org/351.png
+560560,2026-27,2026-08-29,2026-08-29T14:00:00Z,2,Bournemouth,Everton,1.0,1.0,D,FINISHED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/62.png
+560561,2026-27,2026-08-29,2026-08-29T14:00:00Z,2,Coventry,Hull,0.0,1.0,A,FINISHED,https://crests.football-data.org/1076.png,https://crests.football-data.org/322.png
+560558,2026-27,2026-08-29,2026-08-29T16:30:00Z,2,Tottenham,Newcastle,0.0,2.0,A,FINISHED,https://crests.football-data.org/73.png,https://crests.football-data.org/67.png
+560554,2026-27,2026-08-30,2026-08-30T13:00:00Z,2,Sunderland,Fulham,1.0,0.0,H,FINISHED,https://crests.football-data.org/71.png,https://crests.football-data.org/63.png
+560556,2026-27,2026-08-30,2026-08-30T13:00:00Z,2,Chelsea,Brighton,4.0,3.0,H,FINISHED,https://crests.football-data.org/61.png,https://crests.football-data.org/397.png
+560559,2026-27,2026-08-30,2026-08-30T13:00:00Z,2,Leeds,Brentford,1.0,1.0,D,FINISHED,https://crests.football-data.org/341.png,https://crests.football-data.org/402.png
+560553,2026-27,2026-08-30,2026-08-30T15:30:00Z,2,Man United,Ipswich,5.0,2.0,H,FINISHED,https://crests.football-data.org/66.png,https://crests.football-data.org/349.png
+560557,2026-27,2026-08-31,2026-08-31T19:00:00Z,2,Aston Villa,Arsenal,0.0,1.0,A,FINISHED,https://crests.football-data.org/58.png,https://crests.football-data.org/57.png
+560566,2026-27,2026-09-04,2026-09-04T19:00:00Z,3,Ipswich,Liverpool,0.0,2.0,A,FINISHED,https://crests.football-data.org/349.png,https://crests.football-data.org/64.png
+560571,2026-27,2026-09-05,2026-09-05T11:30:00Z,3,Newcastle,Bournemouth,2.0,2.0,D,FINISHED,https://crests.football-data.org/67.png,https://crests.football-data.org/bournemouth.png
+560568,2026-27,2026-09-05,2026-09-05T14:00:00Z,3,Fulham,Crystal Palace,2.0,3.0,A,FINISHED,https://crests.football-data.org/63.png,https://crests.football-data.org/354.png
+560565,2026-27,2026-09-05,2026-09-05T14:00:00Z,3,Brentford,Sunderland,1.0,1.0,D,FINISHED,https://crests.football-data.org/402.png,https://crests.football-data.org/71.png
+560563,2026-27,2026-09-05,2026-09-05T14:00:00Z,3,Man City,Coventry,1.0,0.0,H,FINISHED,https://crests.football-data.org/65.png,https://crests.football-data.org/1076.png
+560562,2026-27,2026-09-05,2026-09-05T14:00:00Z,3,Nott'm Forest,Tottenham,0.0,0.0,D,FINISHED,https://crests.football-data.org/351.png,https://crests.football-data.org/73.png
+560564,2026-27,2026-09-05,2026-09-05T14:00:00Z,3,Brighton,Leeds,1.0,1.0,D,FINISHED,https://crests.football-data.org/397.png,https://crests.football-data.org/341.png
+560569,2026-27,2026-09-05,2026-09-05T16:30:00Z,3,Hull,Aston Villa,0.0,0.0,D,FINISHED,https://crests.football-data.org/322.png,https://crests.football-data.org/58.png
+560567,2026-27,2026-09-06,2026-09-06T13:00:00Z,3,Everton,Man United,2.0,2.0,D,FINISHED,https://crests.football-data.org/62.png,https://crests.football-data.org/66.png
+560570,2026-27,2026-09-06,2026-09-06T15:30:00Z,3,Arsenal,Chelsea,2.0,1.0,H,FINISHED,https://crests.football-data.org/57.png,https://crests.football-data.org/61.png
+560581,2026-27,2026-09-12,2026-09-12T14:00:00Z,4,Chelsea,Hull,2.0,2.0,D,FINISHED,https://crests.football-data.org/61.png,https://crests.football-data.org/322.png
+560572,2026-27,2026-09-12,2026-09-12T14:00:00Z,4,Crystal Palace,Ipswich,2.0,3.0,A,FINISHED,https://crests.football-data.org/354.png,https://crests.football-data.org/349.png
+560573,2026-27,2026-09-12,2026-09-12T14:00:00Z,4,Liverpool,Fulham,0.0,0.0,D,FINISHED,https://crests.football-data.org/64.png,https://crests.football-data.org/63.png
+560574,2026-27,2026-09-12,2026-09-12T14:00:00Z,4,Aston Villa,Nott'm Forest,1.0,2.0,A,FINISHED,https://crests.football-data.org/58.png,https://crests.football-data.org/351.png
+560576,2026-27,2026-09-12,2026-09-12T14:00:00Z,4,Bournemouth,Brentford,2.0,2.0,D,FINISHED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/402.png
+560575,2026-27,2026-09-12,2026-09-12T16:30:00Z,4,Tottenham,Everton,0.0,0.0,D,FINISHED,https://crests.football-data.org/73.png,https://crests.football-data.org/62.png
+560577,2026-27,2026-09-12,2026-09-12T19:00:00Z,4,Sunderland,Arsenal,0.0,2.0,A,FINISHED,https://crests.football-data.org/71.png,https://crests.football-data.org/57.png
+560578,2026-27,2026-09-13,2026-09-13T13:00:00Z,4,Coventry,Brighton,0.0,5.0,A,FINISHED,https://crests.football-data.org/1076.png,https://crests.football-data.org/397.png
+560580,2026-27,2026-09-13,2026-09-13T15:30:00Z,4,Man United,Man City,0.0,1.0,A,FINISHED,https://crests.football-data.org/66.png,https://crests.football-data.org/65.png
+560579,2026-27,2026-09-14,2026-09-14T19:00:00Z,4,Leeds,Newcastle,4.0,1.0,H,FINISHED,https://crests.football-data.org/341.png,https://crests.football-data.org/67.png
+560591,2026-27,2026-09-18,2026-09-18T19:00:00Z,5,Brentford,Chelsea,3.0,0.0,H,FINISHED,https://crests.football-data.org/402.png,https://crests.football-data.org/61.png
+560587,2026-27,2026-09-19,2026-09-19T11:30:00Z,5,Tottenham,Aston Villa,2.0,3.0,A,FINISHED,https://crests.football-data.org/73.png,https://crests.football-data.org/58.png
+560584,2026-27,2026-09-19,2026-09-19T14:00:00Z,5,Everton,Ipswich,1.0,0.0,H,FINISHED,https://crests.football-data.org/62.png,https://crests.football-data.org/349.png
+560586,2026-27,2026-09-19,2026-09-19T14:00:00Z,5,Brighton,Arsenal,3.0,0.0,H,FINISHED,https://crests.football-data.org/397.png,https://crests.football-data.org/57.png
+560588,2026-27,2026-09-19,2026-09-19T14:00:00Z,5,Newcastle,Hull,2.0,1.0,H,FINISHED,https://crests.football-data.org/67.png,https://crests.football-data.org/322.png
+560589,2026-27,2026-09-19,2026-09-19T16:30:00Z,5,Nott'm Forest,Coventry,0.0,1.0,A,FINISHED,https://crests.football-data.org/351.png,https://crests.football-data.org/1076.png
+560590,2026-27,2026-09-20,2026-09-20T13:00:00Z,5,Man City,Sunderland,5.0,3.0,H,FINISHED,https://crests.football-data.org/65.png,https://crests.football-data.org/71.png
+560582,2026-27,2026-09-20,2026-09-20T13:00:00Z,5,Bournemouth,Liverpool,0.0,1.0,A,FINISHED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/64.png
+560585,2026-27,2026-09-20,2026-09-20T13:00:00Z,5,Leeds,Crystal Palace,0.0,0.0,D,FINISHED,https://crests.football-data.org/341.png,https://crests.football-data.org/354.png
+560583,2026-27,2026-09-20,2026-09-20T15:30:00Z,5,Fulham,Man United,1.0,1.0,D,FINISHED,https://crests.football-data.org/63.png,https://crests.football-data.org/66.png
+560593,2026-27,2026-10-10,2026-10-10T11:30:00Z,6,Arsenal,Leeds,2.0,1.0,H,FINISHED,https://crests.football-data.org/57.png,https://crests.football-data.org/341.png
+560592,2026-27,2026-10-10,2026-10-10T14:00:00Z,6,Sunderland,Brighton,0.0,2.0,A,FINISHED,https://crests.football-data.org/71.png,https://crests.football-data.org/397.png
+560595,2026-27,2026-10-10,2026-10-10T14:00:00Z,6,Chelsea,Bournemouth,5.0,1.0,H,FINISHED,https://crests.football-data.org/61.png,https://crests.football-data.org/bournemouth.png
+560599,2026-27,2026-10-10,2026-10-10T14:00:00Z,6,Ipswich,Fulham,2.0,1.0,H,FINISHED,https://crests.football-data.org/349.png,https://crests.football-data.org/63.png
+560601,2026-27,2026-10-10,2026-10-10T14:00:00Z,6,Aston Villa,Brentford,2.0,2.0,D,FINISHED,https://crests.football-data.org/58.png,https://crests.football-data.org/402.png
+560600,2026-27,2026-10-10,2026-10-10T16:30:00Z,6,Man United,Tottenham,1.0,1.0,D,FINISHED,https://crests.football-data.org/66.png,https://crests.football-data.org/73.png
+560594,2026-27,2026-10-11,2026-10-11T13:00:00Z,6,Hull,Everton,2.0,2.0,D,FINISHED,https://crests.football-data.org/322.png,https://crests.football-data.org/62.png
+560596,2026-27,2026-10-11,2026-10-11T13:00:00Z,6,Crystal Palace,Nott'm Forest,3.0,1.0,H,FINISHED,https://crests.football-data.org/354.png,https://crests.football-data.org/351.png
+560598,2026-27,2026-10-11,2026-10-11T15:30:00Z,6,Liverpool,Man City,0.0,3.0,A,FINISHED,https://crests.football-data.org/64.png,https://crests.football-data.org/65.png
+560597,2026-27,2026-10-12,2026-10-12T19:00:00Z,6,Coventry,Newcastle,4.0,1.0,H,FINISHED,https://crests.football-data.org/1076.png,https://crests.football-data.org/67.png
+560603,2026-27,2026-10-17,2026-10-17T11:30:00Z,7,Everton,Chelsea,0.0,2.0,A,FINISHED,https://crests.football-data.org/62.png,https://crests.football-data.org/61.png
+560602,2026-27,2026-10-17,2026-10-17T14:00:00Z,7,Fulham,Hull,1.0,0.0,H,FINISHED,https://crests.football-data.org/63.png,https://crests.football-data.org/322.png
+560610,2026-27,2026-10-17,2026-10-17T14:00:00Z,7,Man City,Ipswich,3.0,2.0,H,FINISHED,https://crests.football-data.org/65.png,https://crests.football-data.org/349.png
+560611,2026-27,2026-10-17,2026-10-17T14:00:00Z,7,Brentford,Liverpool,1.0,2.0,A,FINISHED,https://crests.football-data.org/402.png,https://crests.football-data.org/64.png
+560607,2026-27,2026-10-17,2026-10-17T16:30:00Z,7,Newcastle,Aston Villa,0.0,1.0,A,FINISHED,https://crests.football-data.org/67.png,https://crests.football-data.org/58.png
+560604,2026-27,2026-10-18,2026-10-18T13:00:00Z,7,Bournemouth,Sunderland,2.0,0.0,H,FINISHED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/71.png
+560605,2026-27,2026-10-18,2026-10-18T13:00:00Z,7,Leeds,Man United,1.0,1.0,D,FINISHED,https://crests.football-data.org/341.png,https://crests.football-data.org/66.png
+560609,2026-27,2026-10-18,2026-10-18T13:00:00Z,7,Brighton,Crystal Palace,5.0,0.0,H,FINISHED,https://crests.football-data.org/397.png,https://crests.football-data.org/354.png
+560608,2026-27,2026-10-18,2026-10-18T15:30:00Z,7,Nott'm Forest,Arsenal,0.0,1.0,A,FINISHED,https://crests.football-data.org/351.png,https://crests.football-data.org/57.png
+560606,2026-27,2026-10-19,2026-10-19T19:00:00Z,7,Tottenham,Coventry,3.0,1.0,H,FINISHED,https://crests.football-data.org/73.png,https://crests.football-data.org/1076.png
+560620,2026-27,2026-10-23,2026-10-23T19:00:00Z,8,Ipswich,Nott'm Forest,1.0,1.0,D,FINISHED,https://crests.football-data.org/349.png,https://crests.football-data.org/351.png
+560614,2026-27,2026-10-24,2026-10-24T11:30:00Z,8,Aston Villa,Man City,2.0,1.0,H,FINISHED,https://crests.football-data.org/58.png,https://crests.football-data.org/65.png
+560616,2026-27,2026-10-24,2026-10-24T14:00:00Z,8,Arsenal,Everton,2.0,0.0,H,FINISHED,https://crests.football-data.org/57.png,https://crests.football-data.org/62.png
+560618,2026-27,2026-10-24,2026-10-24T14:00:00Z,8,Coventry,Fulham,0.0,1.0,A,FINISHED,https://crests.football-data.org/1076.png,https://crests.football-data.org/63.png
+560617,2026-27,2026-10-24,2026-10-24T16:30:00Z,8,Chelsea,Tottenham,0.0,2.0,A,FINISHED,https://crests.football-data.org/61.png,https://crests.football-data.org/73.png
+560612,2026-27,2026-10-25,2026-10-25T14:00:00Z,8,Liverpool,Brighton,2.0,0.0,H,FINISHED,https://crests.football-data.org/64.png,https://crests.football-data.org/397.png
+560613,2026-27,2026-10-25,2026-10-25T14:00:00Z,8,Crystal Palace,Newcastle,0.0,2.0,A,FINISHED,https://crests.football-data.org/354.png,https://crests.football-data.org/67.png
+560615,2026-27,2026-10-25,2026-10-25T14:00:00Z,8,Man United,Bournemouth,0.0,3.0,A,FINISHED,https://crests.football-data.org/66.png,https://crests.football-data.org/bournemouth.png
+560619,2026-27,2026-10-25,2026-10-25T14:00:00Z,8,Hull,Brentford,1.0,1.0,D,FINISHED,https://crests.football-data.org/322.png,https://crests.football-data.org/402.png
+560621,2026-27,2026-10-25,2026-10-25T16:30:00Z,8,Sunderland,Leeds,0.0,0.0,D,FINISHED,https://crests.football-data.org/71.png,https://crests.football-data.org/341.png
+560626,2026-27,2026-10-31,2026-10-31T12:30:00Z,9,Chelsea,Man United,2.0,0.0,H,FINISHED,https://crests.football-data.org/61.png,https://crests.football-data.org/66.png
+560630,2026-27,2026-10-31,2026-10-31T15:00:00Z,9,Brentford,Nott'm Forest,2.0,0.0,H,FINISHED,https://crests.football-data.org/402.png,https://crests.football-data.org/351.png
+560629,2026-27,2026-10-31,2026-10-31T15:00:00Z,9,Hull,Ipswich,2.0,2.0,D,FINISHED,https://crests.football-data.org/322.png,https://crests.football-data.org/349.png
+560623,2026-27,2026-10-31,2026-10-31T15:00:00Z,9,Man City,Brighton,0.0,1.0,A,FINISHED,https://crests.football-data.org/65.png,https://crests.football-data.org/397.png
+560624,2026-27,2026-10-31,2026-10-31T15:00:00Z,9,Bournemouth,Leeds,2.0,0.0,H,FINISHED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/341.png
+560625,2026-27,2026-10-31,2026-10-31T15:00:00Z,9,Coventry,Sunderland,3.0,1.0,H,FINISHED,https://crests.football-data.org/1076.png,https://crests.football-data.org/71.png
+560627,2026-27,2026-10-31,2026-10-31T17:30:00Z,9,Tottenham,Crystal Palace,2.0,0.0,H,FINISHED,https://crests.football-data.org/73.png,https://crests.football-data.org/354.png
+560628,2026-27,2026-10-31,2026-10-31T20:00:00Z,9,Aston Villa,Fulham,1.0,1.0,D,FINISHED,https://crests.football-data.org/58.png,https://crests.football-data.org/63.png
+560631,2026-27,2026-11-01,2026-11-01T16:30:00Z,9,Liverpool,Arsenal,0.0,1.0,A,FINISHED,https://crests.football-data.org/64.png,https://crests.football-data.org/57.png
+560622,2026-27,2026-11-02,2026-11-02T20:00:00Z,9,Newcastle,Everton,0.0,1.0,A,FINISHED,https://crests.football-data.org/67.png,https://crests.football-data.org/62.png
+560634,2026-27,2026-11-06,2026-11-06T20:00:00Z,10,Everton,Coventry,3.0,1.0,H,FINISHED,https://crests.football-data.org/62.png,https://crests.football-data.org/1076.png
+560632,2026-27,2026-11-07,2026-11-07T12:30:00Z,10,Leeds,Tottenham,1.0,0.0,H,FINISHED,https://crests.football-data.org/341.png,https://crests.football-data.org/73.png
+560640,2026-27,2026-11-07,2026-11-07T15:00:00Z,10,Arsenal,Hull,1.0,0.0,H,FINISHED,https://crests.football-data.org/57.png,https://crests.football-data.org/322.png
+560633,2026-27,2026-11-07,2026-11-07T15:00:00Z,10,Fulham,Newcastle,1.0,1.0,D,FINISHED,https://crests.football-data.org/63.png,https://crests.football-data.org/67.png
+560641,2026-27,2026-11-07,2026-11-07T17:30:00Z,10,Nott'm Forest,Man City,3.0,1.0,H,FINISHED,https://crests.football-data.org/351.png,https://crests.football-data.org/65.png
+560635,2026-27,2026-11-08,2026-11-08T14:00:00Z,10,Crystal Palace,Liverpool,1.0,3.0,A,FINISHED,https://crests.football-data.org/354.png,https://crests.football-data.org/64.png
+560636,2026-27,2026-11-08,2026-11-08T14:00:00Z,10,Sunderland,Chelsea,1.0,0.0,H,FINISHED,https://crests.football-data.org/71.png,https://crests.football-data.org/61.png
+560637,2026-27,2026-11-08,2026-11-08T14:00:00Z,10,Ipswich,Bournemouth,1.0,2.0,A,FINISHED,https://crests.football-data.org/349.png,https://crests.football-data.org/bournemouth.png
+560638,2026-27,2026-11-08,2026-11-08T14:00:00Z,10,Brighton,Brentford,2.0,0.0,H,FINISHED,https://crests.football-data.org/397.png,https://crests.football-data.org/402.png
+560639,2026-27,2026-11-08,2026-11-08T16:30:00Z,10,Man United,Aston Villa,4.0,4.0,D,FINISHED,https://crests.football-data.org/66.png,https://crests.football-data.org/58.png
+560643,2026-27,2026-11-21,2026-11-21T12:30:00Z,11,Man City,Fulham,,,,TIMED,https://crests.football-data.org/65.png,https://crests.football-data.org/63.png
+560648,2026-27,2026-11-21,2026-11-21T15:00:00Z,11,Tottenham,Ipswich,,,,TIMED,https://crests.football-data.org/73.png,https://crests.football-data.org/349.png
+560647,2026-27,2026-11-21,2026-11-21T15:00:00Z,11,Bournemouth,Nott'm Forest,,,,TIMED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/351.png
+560650,2026-27,2026-11-21,2026-11-21T15:00:00Z,11,Coventry,Crystal Palace,,,,TIMED,https://crests.football-data.org/1076.png,https://crests.football-data.org/354.png
+560642,2026-27,2026-11-21,2026-11-21T15:00:00Z,11,Chelsea,Leeds,,,,TIMED,https://crests.football-data.org/61.png,https://crests.football-data.org/341.png
+560644,2026-27,2026-11-21,2026-11-21T15:00:00Z,11,Aston Villa,Sunderland,,,,TIMED,https://crests.football-data.org/58.png,https://crests.football-data.org/71.png
+560651,2026-27,2026-11-21,2026-11-21T17:30:00Z,11,Newcastle,Arsenal,,,,TIMED,https://crests.football-data.org/67.png,https://crests.football-data.org/57.png
+560646,2026-27,2026-11-22,2026-11-22T14:00:00Z,11,Hull,Brighton,,,,TIMED,https://crests.football-data.org/322.png,https://crests.football-data.org/397.png
+560645,2026-27,2026-11-22,2026-11-22T16:30:00Z,11,Liverpool,Man United,,,,TIMED,https://crests.football-data.org/64.png,https://crests.football-data.org/66.png
+560649,2026-27,2026-11-23,2026-11-23T20:00:00Z,11,Brentford,Everton,,,,TIMED,https://crests.football-data.org/402.png,https://crests.football-data.org/62.png
+560658,2026-27,2026-11-27,2026-11-27T20:00:00Z,12,Nott'm Forest,Chelsea,,,,TIMED,https://crests.football-data.org/351.png,https://crests.football-data.org/61.png
+560652,2026-27,2026-11-28,2026-11-28T15:00:00Z,12,Leeds,Coventry,,,,TIMED,https://crests.football-data.org/341.png,https://crests.football-data.org/1076.png
+560655,2026-27,2026-11-28,2026-11-28T15:00:00Z,12,Man United,Brentford,,,,TIMED,https://crests.football-data.org/66.png,https://crests.football-data.org/402.png
+560653,2026-27,2026-11-28,2026-11-28T17:30:00Z,12,Ipswich,Aston Villa,,,,TIMED,https://crests.football-data.org/349.png,https://crests.football-data.org/58.png
+560656,2026-27,2026-11-29,2026-11-29T12:00:00Z,12,Everton,Liverpool,,,,TIMED,https://crests.football-data.org/62.png,https://crests.football-data.org/64.png
+560661,2026-27,2026-11-29,2026-11-29T14:05:00Z,12,Crystal Palace,Hull,,,,TIMED,https://crests.football-data.org/354.png,https://crests.football-data.org/322.png
+560660,2026-27,2026-11-29,2026-11-29T14:05:00Z,12,Sunderland,Tottenham,,,,TIMED,https://crests.football-data.org/71.png,https://crests.football-data.org/73.png
+560657,2026-27,2026-11-29,2026-11-29T14:05:00Z,12,Fulham,Bournemouth,,,,TIMED,https://crests.football-data.org/63.png,https://crests.football-data.org/bournemouth.png
+560659,2026-27,2026-11-29,2026-11-29T14:05:00Z,12,Brighton,Newcastle,,,,TIMED,https://crests.football-data.org/397.png,https://crests.football-data.org/67.png
+560654,2026-27,2026-11-29,2026-11-29T16:30:00Z,12,Arsenal,Man City,,,,TIMED,https://crests.football-data.org/57.png,https://crests.football-data.org/65.png
+560668,2026-27,2026-12-01,2026-12-01T20:00:00Z,13,Coventry,Ipswich,,,,TIMED,https://crests.football-data.org/1076.png,https://crests.football-data.org/349.png
+560663,2026-27,2026-12-02,2026-12-02T19:30:00Z,13,Liverpool,Sunderland,,,,TIMED,https://crests.football-data.org/64.png,https://crests.football-data.org/71.png
+560664,2026-27,2026-12-02,2026-12-02T19:30:00Z,13,Hull,Nott'm Forest,,,,TIMED,https://crests.football-data.org/322.png,https://crests.football-data.org/351.png
+560665,2026-27,2026-12-02,2026-12-02T19:30:00Z,13,Chelsea,Crystal Palace,,,,TIMED,https://crests.football-data.org/61.png,https://crests.football-data.org/354.png
+560669,2026-27,2026-12-02,2026-12-02T19:30:00Z,13,Man City,Leeds,,,,TIMED,https://crests.football-data.org/65.png,https://crests.football-data.org/341.png
+560671,2026-27,2026-12-02,2026-12-02T20:15:00Z,13,Bournemouth,Brighton,,,,TIMED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/397.png
+560670,2026-27,2026-12-02,2026-12-02T20:15:00Z,13,Newcastle,Man United,,,,TIMED,https://crests.football-data.org/67.png,https://crests.football-data.org/66.png
+560666,2026-27,2026-12-02,2026-12-02T20:15:00Z,13,Aston Villa,Everton,,,,TIMED,https://crests.football-data.org/58.png,https://crests.football-data.org/62.png
+560667,2026-27,2026-12-02,2026-12-02T20:15:00Z,13,Brentford,Arsenal,,,,TIMED,https://crests.football-data.org/402.png,https://crests.football-data.org/57.png
+560662,2026-27,2026-12-03,2026-12-03T20:00:00Z,13,Tottenham,Fulham,,,,TIMED,https://crests.football-data.org/73.png,https://crests.football-data.org/63.png
+560676,2026-27,2026-12-05,2026-12-05T12:30:00Z,14,Chelsea,Liverpool,,,,TIMED,https://crests.football-data.org/61.png,https://crests.football-data.org/64.png
+560673,2026-27,2026-12-05,2026-12-05T15:00:00Z,14,Man United,Coventry,,,,TIMED,https://crests.football-data.org/66.png,https://crests.football-data.org/1076.png
+560674,2026-27,2026-12-05,2026-12-05T15:00:00Z,14,Leeds,Ipswich,,,,TIMED,https://crests.football-data.org/341.png,https://crests.football-data.org/349.png
+560678,2026-27,2026-12-05,2026-12-05T15:00:00Z,14,Bournemouth,Hull,,,,TIMED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/322.png
+560679,2026-27,2026-12-05,2026-12-05T15:00:00Z,14,Aston Villa,Crystal Palace,,,,TIMED,https://crests.football-data.org/58.png,https://crests.football-data.org/354.png
+560680,2026-27,2026-12-05,2026-12-05T17:30:00Z,14,Nott'm Forest,Brighton,,,,TIMED,https://crests.football-data.org/351.png,https://crests.football-data.org/397.png
+560677,2026-27,2026-12-05,2026-12-05T20:00:00Z,14,Brentford,Man City,,,,TIMED,https://crests.football-data.org/402.png,https://crests.football-data.org/65.png
+560675,2026-27,2026-12-06,2026-12-06T14:00:00Z,14,Newcastle,Sunderland,,,,TIMED,https://crests.football-data.org/67.png,https://crests.football-data.org/71.png
+560681,2026-27,2026-12-06,2026-12-06T14:00:00Z,14,Everton,Fulham,,,,TIMED,https://crests.football-data.org/62.png,https://crests.football-data.org/63.png
+560672,2026-27,2026-12-06,2026-12-06T16:30:00Z,14,Tottenham,Arsenal,,,,TIMED,https://crests.football-data.org/73.png,https://crests.football-data.org/57.png
+560691,2026-27,2026-12-12,2026-12-12T15:00:00Z,15,Fulham,Brentford,,,,TIMED,https://crests.football-data.org/63.png,https://crests.football-data.org/402.png
+560690,2026-27,2026-12-12,2026-12-12T15:00:00Z,15,Liverpool,Leeds,,,,TIMED,https://crests.football-data.org/64.png,https://crests.football-data.org/341.png
+560686,2026-27,2026-12-12,2026-12-12T15:00:00Z,15,Ipswich,Newcastle,,,,TIMED,https://crests.football-data.org/349.png,https://crests.football-data.org/67.png
+560689,2026-27,2026-12-12,2026-12-12T17:30:00Z,15,Man City,Chelsea,,,,TIMED,https://crests.football-data.org/65.png,https://crests.football-data.org/61.png
+560682,2026-27,2026-12-13,2026-12-13T14:00:00Z,15,Sunderland,Nott'm Forest,,,,TIMED,https://crests.football-data.org/71.png,https://crests.football-data.org/351.png
+560685,2026-27,2026-12-13,2026-12-13T14:00:00Z,15,Brighton,Everton,,,,TIMED,https://crests.football-data.org/397.png,https://crests.football-data.org/62.png
+560688,2026-27,2026-12-13,2026-12-13T14:00:00Z,15,Arsenal,Bournemouth,,,,TIMED,https://crests.football-data.org/57.png,https://crests.football-data.org/bournemouth.png
+560687,2026-27,2026-12-13,2026-12-13T16:30:00Z,15,Coventry,Aston Villa,,,,TIMED,https://crests.football-data.org/1076.png,https://crests.football-data.org/58.png
+560683,2026-27,2026-12-13,2026-12-13T19:00:00Z,15,Crystal Palace,Man United,,,,TIMED,https://crests.football-data.org/354.png,https://crests.football-data.org/66.png
+560684,2026-27,2026-12-14,2026-12-14T20:00:00Z,15,Hull,Tottenham,,,,TIMED,https://crests.football-data.org/322.png,https://crests.football-data.org/73.png
+560695,2026-27,2026-12-19,2026-12-19T12:30:00Z,16,Brentford,Newcastle,,,,TIMED,https://crests.football-data.org/402.png,https://crests.football-data.org/67.png
+560696,2026-27,2026-12-19,2026-12-19T15:00:00Z,16,Man City,Hull,,,,TIMED,https://crests.football-data.org/65.png,https://crests.football-data.org/322.png
+560698,2026-27,2026-12-19,2026-12-19T15:00:00Z,16,Bournemouth,Coventry,,,,TIMED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/1076.png
+560692,2026-27,2026-12-19,2026-12-19T15:00:00Z,16,Leeds,Fulham,,,,TIMED,https://crests.football-data.org/341.png,https://crests.football-data.org/63.png
+560700,2026-27,2026-12-19,2026-12-19T17:30:00Z,16,Liverpool,Tottenham,,,,TIMED,https://crests.football-data.org/64.png,https://crests.football-data.org/73.png
+560693,2026-27,2026-12-20,2026-12-20T14:00:00Z,16,Brighton,Ipswich,,,,TIMED,https://crests.football-data.org/397.png,https://crests.football-data.org/349.png
+560694,2026-27,2026-12-20,2026-12-20T14:00:00Z,16,Nott'm Forest,Everton,,,,TIMED,https://crests.football-data.org/351.png,https://crests.football-data.org/62.png
+560697,2026-27,2026-12-20,2026-12-20T14:00:00Z,16,Sunderland,Crystal Palace,,,,TIMED,https://crests.football-data.org/71.png,https://crests.football-data.org/354.png
+560699,2026-27,2026-12-20,2026-12-20T16:30:00Z,16,Arsenal,Man United,,,,TIMED,https://crests.football-data.org/57.png,https://crests.football-data.org/66.png
+560701,2026-27,2026-12-21,2026-12-21T20:00:00Z,16,Chelsea,Aston Villa,,,,TIMED,https://crests.football-data.org/61.png,https://crests.football-data.org/58.png
+560702,2026-27,2026-12-26,2026-12-26T12:30:00Z,17,Aston Villa,Leeds,,,,TIMED,https://crests.football-data.org/58.png,https://crests.football-data.org/341.png
+560709,2026-27,2026-12-26,2026-12-26T15:00:00Z,17,Tottenham,Bournemouth,,,,TIMED,https://crests.football-data.org/73.png,https://crests.football-data.org/bournemouth.png
+560705,2026-27,2026-12-26,2026-12-26T15:00:00Z,17,Everton,Sunderland,,,,TIMED,https://crests.football-data.org/62.png,https://crests.football-data.org/71.png
+560708,2026-27,2026-12-26,2026-12-26T15:00:00Z,17,Fulham,Brighton,,,,TIMED,https://crests.football-data.org/63.png,https://crests.football-data.org/397.png
+560711,2026-27,2026-12-26,2026-12-26T15:00:00Z,17,Ipswich,Brentford,,,,TIMED,https://crests.football-data.org/349.png,https://crests.football-data.org/402.png
+560710,2026-27,2026-12-26,2026-12-26T17:30:00Z,17,Hull,Liverpool,,,,TIMED,https://crests.football-data.org/322.png,https://crests.football-data.org/64.png
+560707,2026-27,2026-12-26,2026-12-26T20:00:00Z,17,Newcastle,Man City,,,,TIMED,https://crests.football-data.org/67.png,https://crests.football-data.org/65.png
+560706,2026-27,2026-12-27,2026-12-27T14:00:00Z,17,Coventry,Chelsea,,,,TIMED,https://crests.football-data.org/1076.png,https://crests.football-data.org/61.png
+560703,2026-27,2026-12-27,2026-12-27T16:30:00Z,17,Man United,Nott'm Forest,,,,TIMED,https://crests.football-data.org/66.png,https://crests.football-data.org/351.png
+560704,2026-27,2026-12-27,2026-12-27T19:00:00Z,17,Crystal Palace,Arsenal,,,,TIMED,https://crests.football-data.org/354.png,https://crests.football-data.org/57.png
+560716,2026-27,2026-12-29,2026-12-29T19:30:00Z,18,Hull,Leeds,,,,TIMED,https://crests.football-data.org/322.png,https://crests.football-data.org/341.png
+560719,2026-27,2026-12-29,2026-12-29T19:30:00Z,18,Tottenham,Brighton,,,,TIMED,https://crests.football-data.org/73.png,https://crests.football-data.org/397.png
+560720,2026-27,2026-12-29,2026-12-29T20:15:00Z,18,Everton,Man City,,,,TIMED,https://crests.football-data.org/62.png,https://crests.football-data.org/65.png
+560717,2026-27,2026-12-30,2026-12-30T19:30:00Z,18,Man United,Sunderland,,,,TIMED,https://crests.football-data.org/66.png,https://crests.football-data.org/71.png
+560715,2026-27,2026-12-30,2026-12-30T19:30:00Z,18,Newcastle,Nott'm Forest,,,,TIMED,https://crests.football-data.org/67.png,https://crests.football-data.org/351.png
+560721,2026-27,2026-12-30,2026-12-30T19:30:00Z,18,Crystal Palace,Bournemouth,,,,TIMED,https://crests.football-data.org/354.png,https://crests.football-data.org/bournemouth.png
+560712,2026-27,2026-12-30,2026-12-30T19:30:00Z,18,Fulham,Arsenal,,,,TIMED,https://crests.football-data.org/63.png,https://crests.football-data.org/57.png
+560713,2026-27,2026-12-30,2026-12-30T19:30:00Z,18,Coventry,Brentford,,,,TIMED,https://crests.football-data.org/1076.png,https://crests.football-data.org/402.png
+560714,2026-27,2026-12-30,2026-12-30T20:15:00Z,18,Aston Villa,Liverpool,,,,TIMED,https://crests.football-data.org/58.png,https://crests.football-data.org/64.png
+560718,2026-27,2026-12-30,2026-12-30T20:15:00Z,18,Ipswich,Chelsea,,,,TIMED,https://crests.football-data.org/349.png,https://crests.football-data.org/61.png
+560724,2026-27,2027-01-01,2027-01-01T20:00:00Z,19,Leeds,Everton,,,,TIMED,https://crests.football-data.org/341.png,https://crests.football-data.org/62.png
+560730,2026-27,2027-01-02,2027-01-02T12:30:00Z,19,Brighton,Man United,,,,TIMED,https://crests.football-data.org/397.png,https://crests.football-data.org/66.png
+560723,2026-27,2027-01-02,2027-01-02T15:00:00Z,19,Brentford,Crystal Palace,,,,TIMED,https://crests.football-data.org/402.png,https://crests.football-data.org/354.png
+560725,2026-27,2027-01-02,2027-01-02T15:00:00Z,19,Arsenal,Ipswich,,,,TIMED,https://crests.football-data.org/57.png,https://crests.football-data.org/349.png
+560726,2026-27,2027-01-02,2027-01-02T15:00:00Z,19,Sunderland,Hull,,,,TIMED,https://crests.football-data.org/71.png,https://crests.football-data.org/322.png
+560727,2026-27,2027-01-02,2027-01-02T15:00:00Z,19,Liverpool,Coventry,,,,TIMED,https://crests.football-data.org/64.png,https://crests.football-data.org/1076.png
+560729,2026-27,2027-01-02,2027-01-02T15:00:00Z,19,Nott'm Forest,Fulham,,,,TIMED,https://crests.football-data.org/351.png,https://crests.football-data.org/63.png
+560722,2026-27,2027-01-02,2027-01-02T17:30:00Z,19,Bournemouth,Aston Villa,,,,TIMED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/58.png
+560728,2026-27,2027-01-03,2027-01-03T14:00:00Z,19,Chelsea,Newcastle,,,,TIMED,https://crests.football-data.org/61.png,https://crests.football-data.org/67.png
+560731,2026-27,2027-01-03,2027-01-03T16:30:00Z,19,Man City,Tottenham,,,,TIMED,https://crests.football-data.org/65.png,https://crests.football-data.org/73.png
+560732,2026-27,2027-01-05,2027-01-05T19:30:00Z,20,Arsenal,Brentford,,,,TIMED,https://crests.football-data.org/57.png,https://crests.football-data.org/402.png
+560735,2026-27,2027-01-05,2027-01-05T19:30:00Z,20,Brighton,Bournemouth,,,,TIMED,https://crests.football-data.org/397.png,https://crests.football-data.org/bournemouth.png
+560736,2026-27,2027-01-05,2027-01-05T19:30:00Z,20,Nott'm Forest,Hull,,,,TIMED,https://crests.football-data.org/351.png,https://crests.football-data.org/322.png
+560738,2026-27,2027-01-05,2027-01-05T19:30:00Z,20,Everton,Aston Villa,,,,TIMED,https://crests.football-data.org/62.png,https://crests.football-data.org/58.png
+560739,2026-27,2027-01-05,2027-01-05T20:15:00Z,20,Sunderland,Liverpool,,,,TIMED,https://crests.football-data.org/71.png,https://crests.football-data.org/64.png
+560737,2026-27,2027-01-06,2027-01-06T19:30:00Z,20,Fulham,Tottenham,,,,TIMED,https://crests.football-data.org/63.png,https://crests.football-data.org/73.png
+560740,2026-27,2027-01-06,2027-01-06T19:30:00Z,20,Crystal Palace,Chelsea,,,,TIMED,https://crests.football-data.org/354.png,https://crests.football-data.org/61.png
+560741,2026-27,2027-01-06,2027-01-06T19:30:00Z,20,Ipswich,Coventry,,,,TIMED,https://crests.football-data.org/349.png,https://crests.football-data.org/1076.png
+560733,2026-27,2027-01-06,2027-01-06T20:15:00Z,20,Leeds,Man City,,,,TIMED,https://crests.football-data.org/341.png,https://crests.football-data.org/65.png
+560734,2026-27,2027-01-07,2027-01-07T20:00:00Z,20,Man United,Newcastle,,,,TIMED,https://crests.football-data.org/66.png,https://crests.football-data.org/67.png
+560751,2026-27,2027-01-16,2027-01-16T15:00:00Z,21,Newcastle,Fulham,,,,TIMED,https://crests.football-data.org/67.png,https://crests.football-data.org/63.png
+560750,2026-27,2027-01-16,2027-01-16T15:00:00Z,21,Hull,Arsenal,,,,TIMED,https://crests.football-data.org/322.png,https://crests.football-data.org/57.png
+560749,2026-27,2027-01-16,2027-01-16T15:00:00Z,21,Liverpool,Crystal Palace,,,,TIMED,https://crests.football-data.org/64.png,https://crests.football-data.org/354.png
+560748,2026-27,2027-01-16,2027-01-16T15:00:00Z,21,Coventry,Everton,,,,TIMED,https://crests.football-data.org/1076.png,https://crests.football-data.org/62.png
+560747,2026-27,2027-01-16,2027-01-16T15:00:00Z,21,Tottenham,Leeds,,,,TIMED,https://crests.football-data.org/73.png,https://crests.football-data.org/341.png
+560744,2026-27,2027-01-16,2027-01-16T15:00:00Z,21,Chelsea,Sunderland,,,,TIMED,https://crests.football-data.org/61.png,https://crests.football-data.org/71.png
+560745,2026-27,2027-01-16,2027-01-16T15:00:00Z,21,Brentford,Brighton,,,,TIMED,https://crests.football-data.org/402.png,https://crests.football-data.org/397.png
+560743,2026-27,2027-01-16,2027-01-16T15:00:00Z,21,Man City,Nott'm Forest,,,,TIMED,https://crests.football-data.org/65.png,https://crests.football-data.org/351.png
+560742,2026-27,2027-01-16,2027-01-16T15:00:00Z,21,Bournemouth,Ipswich,,,,TIMED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/349.png
+560746,2026-27,2027-01-16,2027-01-16T15:00:00Z,21,Aston Villa,Man United,,,,TIMED,https://crests.football-data.org/58.png,https://crests.football-data.org/66.png
+560758,2026-27,2027-01-23,2027-01-23T15:00:00Z,22,Fulham,Aston Villa,,,,TIMED,https://crests.football-data.org/63.png,https://crests.football-data.org/58.png
+560761,2026-27,2027-01-23,2027-01-23T15:00:00Z,22,Crystal Palace,Tottenham,,,,TIMED,https://crests.football-data.org/354.png,https://crests.football-data.org/73.png
+560760,2026-27,2027-01-23,2027-01-23T15:00:00Z,22,Brighton,Man City,,,,TIMED,https://crests.football-data.org/397.png,https://crests.football-data.org/65.png
+560759,2026-27,2027-01-23,2027-01-23T15:00:00Z,22,Man United,Liverpool,,,,TIMED,https://crests.football-data.org/66.png,https://crests.football-data.org/64.png
+560757,2026-27,2027-01-23,2027-01-23T15:00:00Z,22,Leeds,Chelsea,,,,TIMED,https://crests.football-data.org/341.png,https://crests.football-data.org/61.png
+560753,2026-27,2027-01-23,2027-01-23T15:00:00Z,22,Everton,Brentford,,,,TIMED,https://crests.football-data.org/62.png,https://crests.football-data.org/402.png
+560755,2026-27,2027-01-23,2027-01-23T15:00:00Z,22,Nott'm Forest,Bournemouth,,,,TIMED,https://crests.football-data.org/351.png,https://crests.football-data.org/bournemouth.png
+560754,2026-27,2027-01-23,2027-01-23T15:00:00Z,22,Sunderland,Coventry,,,,TIMED,https://crests.football-data.org/71.png,https://crests.football-data.org/1076.png
+560752,2026-27,2027-01-23,2027-01-23T15:00:00Z,22,Ipswich,Hull,,,,TIMED,https://crests.football-data.org/349.png,https://crests.football-data.org/322.png
+560756,2026-27,2027-01-23,2027-01-23T15:00:00Z,22,Arsenal,Newcastle,,,,TIMED,https://crests.football-data.org/57.png,https://crests.football-data.org/67.png
+560771,2026-27,2027-01-30,2027-01-30T15:00:00Z,23,Aston Villa,Ipswich,,,,TIMED,https://crests.football-data.org/58.png,https://crests.football-data.org/349.png
+560770,2026-27,2027-01-30,2027-01-30T15:00:00Z,23,Man City,Arsenal,,,,TIMED,https://crests.football-data.org/65.png,https://crests.football-data.org/57.png
+560769,2026-27,2027-01-30,2027-01-30T15:00:00Z,23,Liverpool,Everton,,,,TIMED,https://crests.football-data.org/64.png,https://crests.football-data.org/62.png
+560768,2026-27,2027-01-30,2027-01-30T15:00:00Z,23,Chelsea,Nott'm Forest,,,,TIMED,https://crests.football-data.org/61.png,https://crests.football-data.org/351.png
+560767,2026-27,2027-01-30,2027-01-30T15:00:00Z,23,Bournemouth,Fulham,,,,TIMED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/63.png
+560766,2026-27,2027-01-30,2027-01-30T15:00:00Z,23,Coventry,Leeds,,,,TIMED,https://crests.football-data.org/1076.png,https://crests.football-data.org/341.png
+560764,2026-27,2027-01-30,2027-01-30T15:00:00Z,23,Newcastle,Brighton,,,,TIMED,https://crests.football-data.org/67.png,https://crests.football-data.org/397.png
+560763,2026-27,2027-01-30,2027-01-30T15:00:00Z,23,Brentford,Man United,,,,TIMED,https://crests.football-data.org/402.png,https://crests.football-data.org/66.png
+560762,2026-27,2027-01-30,2027-01-30T15:00:00Z,23,Tottenham,Sunderland,,,,TIMED,https://crests.football-data.org/73.png,https://crests.football-data.org/71.png
+560765,2026-27,2027-01-30,2027-01-30T15:00:00Z,23,Hull,Crystal Palace,,,,TIMED,https://crests.football-data.org/322.png,https://crests.football-data.org/354.png
+560778,2026-27,2027-02-06,2027-02-06T15:00:00Z,24,Fulham,Man City,,,,TIMED,https://crests.football-data.org/63.png,https://crests.football-data.org/65.png
+560781,2026-27,2027-02-06,2027-02-06T15:00:00Z,24,Nott'm Forest,Brentford,,,,TIMED,https://crests.football-data.org/351.png,https://crests.football-data.org/402.png
+560780,2026-27,2027-02-06,2027-02-06T15:00:00Z,24,Man United,Chelsea,,,,TIMED,https://crests.football-data.org/66.png,https://crests.football-data.org/61.png
+560777,2026-27,2027-02-06,2027-02-06T15:00:00Z,24,Everton,Newcastle,,,,TIMED,https://crests.football-data.org/62.png,https://crests.football-data.org/67.png
+560779,2026-27,2027-02-06,2027-02-06T15:00:00Z,24,Leeds,Bournemouth,,,,TIMED,https://crests.football-data.org/341.png,https://crests.football-data.org/bournemouth.png
+560775,2026-27,2027-02-06,2027-02-06T15:00:00Z,24,Crystal Palace,Coventry,,,,TIMED,https://crests.football-data.org/354.png,https://crests.football-data.org/1076.png
+560774,2026-27,2027-02-06,2027-02-06T15:00:00Z,24,Sunderland,Aston Villa,,,,TIMED,https://crests.football-data.org/71.png,https://crests.football-data.org/58.png
+560776,2026-27,2027-02-06,2027-02-06T15:00:00Z,24,Ipswich,Tottenham,,,,TIMED,https://crests.football-data.org/349.png,https://crests.football-data.org/73.png
+560773,2026-27,2027-02-06,2027-02-06T15:00:00Z,24,Brighton,Hull,,,,TIMED,https://crests.football-data.org/397.png,https://crests.football-data.org/322.png
+560772,2026-27,2027-02-06,2027-02-06T15:00:00Z,24,Arsenal,Liverpool,,,,TIMED,https://crests.football-data.org/57.png,https://crests.football-data.org/64.png
+560791,2026-27,2027-02-10,2027-02-10T20:00:00Z,25,Ipswich,Arsenal,,,,TIMED,https://crests.football-data.org/349.png,https://crests.football-data.org/57.png
+560790,2026-27,2027-02-10,2027-02-10T20:00:00Z,25,Man United,Brighton,,,,TIMED,https://crests.football-data.org/66.png,https://crests.football-data.org/397.png
+560789,2026-27,2027-02-10,2027-02-10T20:00:00Z,25,Tottenham,Man City,,,,TIMED,https://crests.football-data.org/73.png,https://crests.football-data.org/65.png
+560788,2026-27,2027-02-10,2027-02-10T20:00:00Z,25,Fulham,Nott'm Forest,,,,TIMED,https://crests.football-data.org/63.png,https://crests.football-data.org/351.png
+560787,2026-27,2027-02-10,2027-02-10T20:00:00Z,25,Newcastle,Chelsea,,,,TIMED,https://crests.football-data.org/67.png,https://crests.football-data.org/61.png
+560786,2026-27,2027-02-10,2027-02-10T20:00:00Z,25,Crystal Palace,Brentford,,,,TIMED,https://crests.football-data.org/354.png,https://crests.football-data.org/402.png
+560785,2026-27,2027-02-10,2027-02-10T20:00:00Z,25,Aston Villa,Bournemouth,,,,TIMED,https://crests.football-data.org/58.png,https://crests.football-data.org/bournemouth.png
+560784,2026-27,2027-02-10,2027-02-10T20:00:00Z,25,Hull,Sunderland,,,,TIMED,https://crests.football-data.org/322.png,https://crests.football-data.org/71.png
+560783,2026-27,2027-02-10,2027-02-10T20:00:00Z,25,Coventry,Liverpool,,,,TIMED,https://crests.football-data.org/1076.png,https://crests.football-data.org/64.png
+560782,2026-27,2027-02-10,2027-02-10T20:00:00Z,25,Everton,Leeds,,,,TIMED,https://crests.football-data.org/62.png,https://crests.football-data.org/341.png
+560800,2026-27,2027-02-20,2027-02-20T15:00:00Z,26,Sunderland,Everton,,,,TIMED,https://crests.football-data.org/71.png,https://crests.football-data.org/62.png
+560799,2026-27,2027-02-20,2027-02-20T15:00:00Z,26,Brighton,Tottenham,,,,TIMED,https://crests.football-data.org/397.png,https://crests.football-data.org/73.png
+560798,2026-27,2027-02-20,2027-02-20T15:00:00Z,26,Nott'm Forest,Man United,,,,TIMED,https://crests.football-data.org/351.png,https://crests.football-data.org/66.png
+560797,2026-27,2027-02-20,2027-02-20T15:00:00Z,26,Arsenal,Fulham,,,,TIMED,https://crests.football-data.org/57.png,https://crests.football-data.org/63.png
+560801,2026-27,2027-02-20,2027-02-20T15:00:00Z,26,Leeds,Aston Villa,,,,TIMED,https://crests.football-data.org/341.png,https://crests.football-data.org/58.png
+560795,2026-27,2027-02-20,2027-02-20T15:00:00Z,26,Chelsea,Ipswich,,,,TIMED,https://crests.football-data.org/61.png,https://crests.football-data.org/349.png
+560794,2026-27,2027-02-20,2027-02-20T15:00:00Z,26,Brentford,Coventry,,,,TIMED,https://crests.football-data.org/402.png,https://crests.football-data.org/1076.png
+560793,2026-27,2027-02-20,2027-02-20T15:00:00Z,26,Bournemouth,Crystal Palace,,,,TIMED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/354.png
+560792,2026-27,2027-02-20,2027-02-20T15:00:00Z,26,Man City,Newcastle,,,,TIMED,https://crests.football-data.org/65.png,https://crests.football-data.org/67.png
+560796,2026-27,2027-02-20,2027-02-20T15:00:00Z,26,Liverpool,Hull,,,,TIMED,https://crests.football-data.org/64.png,https://crests.football-data.org/322.png
+560810,2026-27,2027-02-27,2027-02-27T15:00:00Z,27,Newcastle,Brentford,,,,TIMED,https://crests.football-data.org/67.png,https://crests.football-data.org/402.png
+560809,2026-27,2027-02-27,2027-02-27T15:00:00Z,27,Tottenham,Liverpool,,,,TIMED,https://crests.football-data.org/73.png,https://crests.football-data.org/64.png
+560808,2026-27,2027-02-27,2027-02-27T15:00:00Z,27,Aston Villa,Chelsea,,,,TIMED,https://crests.football-data.org/58.png,https://crests.football-data.org/61.png
+560807,2026-27,2027-02-27,2027-02-27T15:00:00Z,27,Fulham,Leeds,,,,TIMED,https://crests.football-data.org/63.png,https://crests.football-data.org/341.png
+560811,2026-27,2027-02-27,2027-02-27T15:00:00Z,27,Hull,Man City,,,,TIMED,https://crests.football-data.org/322.png,https://crests.football-data.org/65.png
+560805,2026-27,2027-02-27,2027-02-27T15:00:00Z,27,Coventry,Bournemouth,,,,TIMED,https://crests.football-data.org/1076.png,https://crests.football-data.org/bournemouth.png
+560804,2026-27,2027-02-27,2027-02-27T15:00:00Z,27,Ipswich,Brighton,,,,TIMED,https://crests.football-data.org/349.png,https://crests.football-data.org/397.png
+560803,2026-27,2027-02-27,2027-02-27T15:00:00Z,27,Man United,Arsenal,,,,TIMED,https://crests.football-data.org/66.png,https://crests.football-data.org/57.png
+560802,2026-27,2027-02-27,2027-02-27T15:00:00Z,27,Crystal Palace,Sunderland,,,,TIMED,https://crests.football-data.org/354.png,https://crests.football-data.org/71.png
+560806,2026-27,2027-02-27,2027-02-27T15:00:00Z,27,Everton,Nott'm Forest,,,,TIMED,https://crests.football-data.org/62.png,https://crests.football-data.org/351.png
+560821,2026-27,2027-03-03,2027-03-03T20:00:00Z,28,Chelsea,Coventry,,,,TIMED,https://crests.football-data.org/61.png,https://crests.football-data.org/1076.png
+560820,2026-27,2027-03-03,2027-03-03T20:00:00Z,28,Brentford,Ipswich,,,,TIMED,https://crests.football-data.org/402.png,https://crests.football-data.org/349.png
+560819,2026-27,2027-03-03,2027-03-03T20:00:00Z,28,Brighton,Fulham,,,,TIMED,https://crests.football-data.org/397.png,https://crests.football-data.org/63.png
+560818,2026-27,2027-03-03,2027-03-03T20:00:00Z,28,Liverpool,Aston Villa,,,,TIMED,https://crests.football-data.org/64.png,https://crests.football-data.org/58.png
+560817,2026-27,2027-03-03,2027-03-03T20:00:00Z,28,Sunderland,Man United,,,,TIMED,https://crests.football-data.org/71.png,https://crests.football-data.org/66.png
+560816,2026-27,2027-03-03,2027-03-03T20:00:00Z,28,Leeds,Hull,,,,TIMED,https://crests.football-data.org/341.png,https://crests.football-data.org/322.png
+560814,2026-27,2027-03-03,2027-03-03T20:00:00Z,28,Man City,Everton,,,,TIMED,https://crests.football-data.org/65.png,https://crests.football-data.org/62.png
+560813,2026-27,2027-03-03,2027-03-03T20:00:00Z,28,Bournemouth,Tottenham,,,,TIMED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/73.png
+560812,2026-27,2027-03-03,2027-03-03T20:00:00Z,28,Nott'm Forest,Newcastle,,,,TIMED,https://crests.football-data.org/351.png,https://crests.football-data.org/67.png
+560815,2026-27,2027-03-03,2027-03-03T20:00:00Z,28,Arsenal,Crystal Palace,,,,TIMED,https://crests.football-data.org/57.png,https://crests.football-data.org/354.png
+560828,2026-27,2027-03-13,2027-03-13T15:00:00Z,29,Chelsea,Arsenal,,,,TIMED,https://crests.football-data.org/61.png,https://crests.football-data.org/57.png
+560831,2026-27,2027-03-13,2027-03-13T15:00:00Z,29,Sunderland,Brentford,,,,TIMED,https://crests.football-data.org/71.png,https://crests.football-data.org/402.png
+560830,2026-27,2027-03-13,2027-03-13T15:00:00Z,29,Man United,Everton,,,,TIMED,https://crests.football-data.org/66.png,https://crests.football-data.org/62.png
+560829,2026-27,2027-03-13,2027-03-13T15:00:00Z,29,Aston Villa,Hull,,,,TIMED,https://crests.football-data.org/58.png,https://crests.football-data.org/322.png
+560827,2026-27,2027-03-13,2027-03-13T15:00:00Z,29,Bournemouth,Newcastle,,,,TIMED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/67.png
+560826,2026-27,2027-03-13,2027-03-13T15:00:00Z,29,Coventry,Man City,,,,TIMED,https://crests.football-data.org/1076.png,https://crests.football-data.org/65.png
+560825,2026-27,2027-03-13,2027-03-13T15:00:00Z,29,Liverpool,Ipswich,,,,TIMED,https://crests.football-data.org/64.png,https://crests.football-data.org/349.png
+560824,2026-27,2027-03-13,2027-03-13T15:00:00Z,29,Crystal Palace,Fulham,,,,TIMED,https://crests.football-data.org/354.png,https://crests.football-data.org/63.png
+560823,2026-27,2027-03-13,2027-03-13T15:00:00Z,29,Tottenham,Nott'm Forest,,,,TIMED,https://crests.football-data.org/73.png,https://crests.football-data.org/351.png
+560822,2026-27,2027-03-13,2027-03-13T15:00:00Z,29,Leeds,Brighton,,,,TIMED,https://crests.football-data.org/341.png,https://crests.football-data.org/397.png
+560841,2026-27,2027-03-20,2027-03-20T15:00:00Z,30,Newcastle,Leeds,,,,TIMED,https://crests.football-data.org/67.png,https://crests.football-data.org/341.png
+560840,2026-27,2027-03-20,2027-03-20T15:00:00Z,30,Everton,Tottenham,,,,TIMED,https://crests.football-data.org/62.png,https://crests.football-data.org/73.png
+560839,2026-27,2027-03-20,2027-03-20T15:00:00Z,30,Nott'm Forest,Aston Villa,,,,TIMED,https://crests.football-data.org/351.png,https://crests.football-data.org/58.png
+560838,2026-27,2027-03-20,2027-03-20T15:00:00Z,30,Hull,Chelsea,,,,TIMED,https://crests.football-data.org/322.png,https://crests.football-data.org/61.png
+560837,2026-27,2027-03-20,2027-03-20T15:00:00Z,30,Fulham,Liverpool,,,,TIMED,https://crests.football-data.org/63.png,https://crests.football-data.org/64.png
+560835,2026-27,2027-03-20,2027-03-20T15:00:00Z,30,Ipswich,Crystal Palace,,,,TIMED,https://crests.football-data.org/349.png,https://crests.football-data.org/354.png
+560834,2026-27,2027-03-20,2027-03-20T15:00:00Z,30,Man City,Man United,,,,TIMED,https://crests.football-data.org/65.png,https://crests.football-data.org/66.png
+560833,2026-27,2027-03-20,2027-03-20T15:00:00Z,30,Brighton,Coventry,,,,TIMED,https://crests.football-data.org/397.png,https://crests.football-data.org/1076.png
+560832,2026-27,2027-03-20,2027-03-20T15:00:00Z,30,Brentford,Bournemouth,,,,TIMED,https://crests.football-data.org/402.png,https://crests.football-data.org/bournemouth.png
+560836,2026-27,2027-03-20,2027-03-20T15:00:00Z,30,Arsenal,Sunderland,,,,TIMED,https://crests.football-data.org/57.png,https://crests.football-data.org/71.png
+560848,2026-27,2027-04-10,2027-04-10T14:00:00Z,31,Bournemouth,Man City,,,,TIMED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/65.png
+560851,2026-27,2027-04-10,2027-04-10T14:00:00Z,31,Aston Villa,Brighton,,,,TIMED,https://crests.football-data.org/58.png,https://crests.football-data.org/397.png
+560850,2026-27,2027-04-10,2027-04-10T14:00:00Z,31,Tottenham,Brentford,,,,TIMED,https://crests.football-data.org/73.png,https://crests.football-data.org/402.png
+560849,2026-27,2027-04-10,2027-04-10T14:00:00Z,31,Crystal Palace,Everton,,,,TIMED,https://crests.football-data.org/354.png,https://crests.football-data.org/62.png
+560847,2026-27,2027-04-10,2027-04-10T14:00:00Z,31,Coventry,Arsenal,,,,TIMED,https://crests.football-data.org/1076.png,https://crests.football-data.org/57.png
+560842,2026-27,2027-04-10,2027-04-10T14:00:00Z,31,Sunderland,Ipswich,,,,TIMED,https://crests.football-data.org/71.png,https://crests.football-data.org/349.png
+560845,2026-27,2027-04-10,2027-04-10T14:00:00Z,31,Chelsea,Fulham,,,,TIMED,https://crests.football-data.org/61.png,https://crests.football-data.org/63.png
+560844,2026-27,2027-04-10,2027-04-10T14:00:00Z,31,Man United,Hull,,,,TIMED,https://crests.football-data.org/66.png,https://crests.football-data.org/322.png
+560843,2026-27,2027-04-10,2027-04-10T14:00:00Z,31,Leeds,Nott'm Forest,,,,TIMED,https://crests.football-data.org/341.png,https://crests.football-data.org/351.png
+560846,2026-27,2027-04-10,2027-04-10T14:00:00Z,31,Liverpool,Newcastle,,,,TIMED,https://crests.football-data.org/64.png,https://crests.football-data.org/67.png
+560858,2026-27,2027-04-17,2027-04-17T14:00:00Z,32,Ipswich,Man United,,,,TIMED,https://crests.football-data.org/349.png,https://crests.football-data.org/66.png
+560861,2026-27,2027-04-17,2027-04-17T14:00:00Z,32,Everton,Bournemouth,,,,TIMED,https://crests.football-data.org/62.png,https://crests.football-data.org/bournemouth.png
+560860,2026-27,2027-04-17,2027-04-17T14:00:00Z,32,Newcastle,Tottenham,,,,TIMED,https://crests.football-data.org/67.png,https://crests.football-data.org/73.png
+560859,2026-27,2027-04-17,2027-04-17T14:00:00Z,32,Man City,Crystal Palace,,,,TIMED,https://crests.football-data.org/65.png,https://crests.football-data.org/354.png
+560857,2026-27,2027-04-17,2027-04-17T14:00:00Z,32,Arsenal,Aston Villa,,,,TIMED,https://crests.football-data.org/57.png,https://crests.football-data.org/58.png
+560852,2026-27,2027-04-17,2027-04-17T14:00:00Z,32,Brighton,Chelsea,,,,TIMED,https://crests.football-data.org/397.png,https://crests.football-data.org/61.png
+560855,2026-27,2027-04-17,2027-04-17T14:00:00Z,32,Nott'm Forest,Liverpool,,,,TIMED,https://crests.football-data.org/351.png,https://crests.football-data.org/64.png
+560854,2026-27,2027-04-17,2027-04-17T14:00:00Z,32,Brentford,Leeds,,,,TIMED,https://crests.football-data.org/402.png,https://crests.football-data.org/341.png
+560853,2026-27,2027-04-17,2027-04-17T14:00:00Z,32,Fulham,Sunderland,,,,TIMED,https://crests.football-data.org/63.png,https://crests.football-data.org/71.png
+560856,2026-27,2027-04-17,2027-04-17T14:00:00Z,32,Hull,Coventry,,,,TIMED,https://crests.football-data.org/322.png,https://crests.football-data.org/1076.png
+560871,2026-27,2027-04-24,2027-04-24T14:00:00Z,33,Leeds,Liverpool,,,,TIMED,https://crests.football-data.org/341.png,https://crests.football-data.org/64.png
+560870,2026-27,2027-04-24,2027-04-24T14:00:00Z,33,Brentford,Fulham,,,,TIMED,https://crests.football-data.org/402.png,https://crests.football-data.org/63.png
+560869,2026-27,2027-04-24,2027-04-24T14:00:00Z,33,Aston Villa,Coventry,,,,TIMED,https://crests.football-data.org/58.png,https://crests.football-data.org/1076.png
+560868,2026-27,2027-04-24,2027-04-24T14:00:00Z,33,Newcastle,Ipswich,,,,TIMED,https://crests.football-data.org/67.png,https://crests.football-data.org/349.png
+560867,2026-27,2027-04-24,2027-04-24T14:00:00Z,33,Nott'm Forest,Sunderland,,,,TIMED,https://crests.football-data.org/351.png,https://crests.football-data.org/71.png
+560865,2026-27,2027-04-24,2027-04-24T14:00:00Z,33,Man United,Crystal Palace,,,,TIMED,https://crests.football-data.org/66.png,https://crests.football-data.org/354.png
+560864,2026-27,2027-04-24,2027-04-24T14:00:00Z,33,Tottenham,Hull,,,,TIMED,https://crests.football-data.org/73.png,https://crests.football-data.org/322.png
+560863,2026-27,2027-04-24,2027-04-24T14:00:00Z,33,Bournemouth,Arsenal,,,,TIMED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/57.png
+560862,2026-27,2027-04-24,2027-04-24T14:00:00Z,33,Chelsea,Man City,,,,TIMED,https://crests.football-data.org/61.png,https://crests.football-data.org/65.png
+560866,2026-27,2027-04-24,2027-04-24T14:00:00Z,33,Everton,Brighton,,,,TIMED,https://crests.football-data.org/62.png,https://crests.football-data.org/397.png
+560878,2026-27,2027-05-01,2027-05-01T14:00:00Z,34,Liverpool,Chelsea,,,,TIMED,https://crests.football-data.org/64.png,https://crests.football-data.org/61.png
+560881,2026-27,2027-05-01,2027-05-01T14:00:00Z,34,Ipswich,Leeds,,,,TIMED,https://crests.football-data.org/349.png,https://crests.football-data.org/341.png
+560880,2026-27,2027-05-01,2027-05-01T14:00:00Z,34,Crystal Palace,Aston Villa,,,,TIMED,https://crests.football-data.org/354.png,https://crests.football-data.org/58.png
+560879,2026-27,2027-05-01,2027-05-01T14:00:00Z,34,Arsenal,Tottenham,,,,TIMED,https://crests.football-data.org/57.png,https://crests.football-data.org/73.png
+560877,2026-27,2027-05-01,2027-05-01T14:00:00Z,34,Fulham,Everton,,,,TIMED,https://crests.football-data.org/63.png,https://crests.football-data.org/62.png
+560874,2026-27,2027-05-01,2027-05-01T14:00:00Z,34,Coventry,Man United,,,,TIMED,https://crests.football-data.org/1076.png,https://crests.football-data.org/66.png
+560875,2026-27,2027-05-01,2027-05-01T14:00:00Z,34,Hull,Bournemouth,,,,TIMED,https://crests.football-data.org/322.png,https://crests.football-data.org/bournemouth.png
+560876,2026-27,2027-05-01,2027-05-01T14:00:00Z,34,Man City,Brentford,,,,TIMED,https://crests.football-data.org/65.png,https://crests.football-data.org/402.png
+560873,2026-27,2027-05-01,2027-05-01T14:00:00Z,34,Brighton,Nott'm Forest,,,,TIMED,https://crests.football-data.org/397.png,https://crests.football-data.org/351.png
+560872,2026-27,2027-05-01,2027-05-01T14:00:00Z,34,Sunderland,Newcastle,,,,TIMED,https://crests.football-data.org/71.png,https://crests.football-data.org/67.png
+560891,2026-27,2027-05-08,2027-05-08T14:00:00Z,35,Bournemouth,Man United,,,,TIMED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/66.png
+560890,2026-27,2027-05-08,2027-05-08T14:00:00Z,35,Everton,Hull,,,,TIMED,https://crests.football-data.org/62.png,https://crests.football-data.org/322.png
+560889,2026-27,2027-05-08,2027-05-08T14:00:00Z,35,Tottenham,Chelsea,,,,TIMED,https://crests.football-data.org/73.png,https://crests.football-data.org/61.png
+560888,2026-27,2027-05-08,2027-05-08T14:00:00Z,35,Brighton,Sunderland,,,,TIMED,https://crests.football-data.org/397.png,https://crests.football-data.org/71.png
+560887,2026-27,2027-05-08,2027-05-08T14:00:00Z,35,Newcastle,Coventry,,,,TIMED,https://crests.football-data.org/67.png,https://crests.football-data.org/1076.png
+560886,2026-27,2027-05-08,2027-05-08T14:00:00Z,35,Brentford,Aston Villa,,,,TIMED,https://crests.football-data.org/402.png,https://crests.football-data.org/58.png
+560885,2026-27,2027-05-08,2027-05-08T14:00:00Z,35,Nott'm Forest,Crystal Palace,,,,TIMED,https://crests.football-data.org/351.png,https://crests.football-data.org/354.png
+560884,2026-27,2027-05-08,2027-05-08T14:00:00Z,35,Fulham,Ipswich,,,,TIMED,https://crests.football-data.org/63.png,https://crests.football-data.org/349.png
+560883,2026-27,2027-05-08,2027-05-08T14:00:00Z,35,Leeds,Arsenal,,,,TIMED,https://crests.football-data.org/341.png,https://crests.football-data.org/57.png
+560882,2026-27,2027-05-08,2027-05-08T14:00:00Z,35,Man City,Liverpool,,,,TIMED,https://crests.football-data.org/65.png,https://crests.football-data.org/64.png
+560894,2026-27,2027-05-15,2027-05-15T14:00:00Z,36,Ipswich,Man City,,,,TIMED,https://crests.football-data.org/349.png,https://crests.football-data.org/65.png
+560895,2026-27,2027-05-15,2027-05-15T14:00:00Z,36,Arsenal,Nott'm Forest,,,,TIMED,https://crests.football-data.org/57.png,https://crests.football-data.org/351.png
+560892,2026-27,2027-05-15,2027-05-15T14:00:00Z,36,Sunderland,Bournemouth,,,,TIMED,https://crests.football-data.org/71.png,https://crests.football-data.org/bournemouth.png
+560901,2026-27,2027-05-15,2027-05-15T14:00:00Z,36,Coventry,Tottenham,,,,TIMED,https://crests.football-data.org/1076.png,https://crests.football-data.org/73.png
+560893,2026-27,2027-05-15,2027-05-15T14:00:00Z,36,Liverpool,Brentford,,,,TIMED,https://crests.football-data.org/64.png,https://crests.football-data.org/402.png
+560899,2026-27,2027-05-15,2027-05-15T14:00:00Z,36,Aston Villa,Newcastle,,,,TIMED,https://crests.football-data.org/58.png,https://crests.football-data.org/67.png
+560898,2026-27,2027-05-15,2027-05-15T14:00:00Z,36,Crystal Palace,Brighton,,,,TIMED,https://crests.football-data.org/354.png,https://crests.football-data.org/397.png
+560897,2026-27,2027-05-15,2027-05-15T14:00:00Z,36,Man United,Leeds,,,,TIMED,https://crests.football-data.org/66.png,https://crests.football-data.org/341.png
+560896,2026-27,2027-05-15,2027-05-15T14:00:00Z,36,Hull,Fulham,,,,TIMED,https://crests.football-data.org/322.png,https://crests.football-data.org/63.png
+560900,2026-27,2027-05-15,2027-05-15T14:00:00Z,36,Chelsea,Everton,,,,TIMED,https://crests.football-data.org/61.png,https://crests.football-data.org/62.png
+560911,2026-27,2027-05-23,2027-05-23T14:00:00Z,37,Man City,Aston Villa,,,,TIMED,https://crests.football-data.org/65.png,https://crests.football-data.org/58.png
+560910,2026-27,2027-05-23,2027-05-23T14:00:00Z,37,Everton,Arsenal,,,,TIMED,https://crests.football-data.org/62.png,https://crests.football-data.org/57.png
+560908,2026-27,2027-05-23,2027-05-23T14:00:00Z,37,Bournemouth,Chelsea,,,,TIMED,https://crests.football-data.org/bournemouth.png,https://crests.football-data.org/61.png
+560907,2026-27,2027-05-23,2027-05-23T14:00:00Z,37,Nott'm Forest,Ipswich,,,,TIMED,https://crests.football-data.org/351.png,https://crests.football-data.org/349.png
+560909,2026-27,2027-05-23,2027-05-23T14:00:00Z,37,Fulham,Coventry,,,,TIMED,https://crests.football-data.org/63.png,https://crests.football-data.org/1076.png
+560905,2026-27,2027-05-23,2027-05-23T14:00:00Z,37,Leeds,Sunderland,,,,TIMED,https://crests.football-data.org/341.png,https://crests.football-data.org/71.png
+560904,2026-27,2027-05-23,2027-05-23T14:00:00Z,37,Tottenham,Man United,,,,TIMED,https://crests.football-data.org/73.png,https://crests.football-data.org/66.png
+560903,2026-27,2027-05-23,2027-05-23T14:00:00Z,37,Newcastle,Crystal Palace,,,,TIMED,https://crests.football-data.org/67.png,https://crests.football-data.org/354.png
+560902,2026-27,2027-05-23,2027-05-23T14:00:00Z,37,Brentford,Hull,,,,TIMED,https://crests.football-data.org/402.png,https://crests.football-data.org/322.png
+560906,2026-27,2027-05-23,2027-05-23T14:00:00Z,37,Brighton,Liverpool,,,,TIMED,https://crests.football-data.org/397.png,https://crests.football-data.org/64.png
+560920,2026-27,2027-05-30,2027-05-30T15:00:00Z,38,Chelsea,Brentford,,,,TIMED,https://crests.football-data.org/61.png,https://crests.football-data.org/402.png
+560912,2026-27,2027-05-30,2027-05-30T15:00:00Z,38,Ipswich,Everton,,,,TIMED,https://crests.football-data.org/349.png,https://crests.football-data.org/62.png
+560913,2026-27,2027-05-30,2027-05-30T15:00:00Z,38,Arsenal,Brighton,,,,TIMED,https://crests.football-data.org/57.png,https://crests.football-data.org/397.png
+560914,2026-27,2027-05-30,2027-05-30T15:00:00Z,38,Liverpool,Bournemouth,,,,TIMED,https://crests.football-data.org/64.png,https://crests.football-data.org/bournemouth.png
+560915,2026-27,2027-05-30,2027-05-30T15:00:00Z,38,Coventry,Nott'm Forest,,,,TIMED,https://crests.football-data.org/1076.png,https://crests.football-data.org/351.png
+560916,2026-27,2027-05-30,2027-05-30T15:00:00Z,38,Aston Villa,Tottenham,,,,TIMED,https://crests.football-data.org/58.png,https://crests.football-data.org/73.png
+560917,2026-27,2027-05-30,2027-05-30T15:00:00Z,38,Hull,Newcastle,,,,TIMED,https://crests.football-data.org/322.png,https://crests.football-data.org/67.png
+560918,2026-27,2027-05-30,2027-05-30T15:00:00Z,38,Man United,Fulham,,,,TIMED,https://crests.football-data.org/66.png,https://crests.football-data.org/63.png
+560919,2026-27,2027-05-30,2027-05-30T15:00:00Z,38,Sunderland,Man City,,,,TIMED,https://crests.football-data.org/71.png,https://crests.football-data.org/65.png
+560921,2026-27,2027-05-30,2027-05-30T15:00:00Z,38,Crystal Palace,Leeds,,,,TIMED,https://crests.football-data.org/354.png,https://crests.football-data.org/341.png
