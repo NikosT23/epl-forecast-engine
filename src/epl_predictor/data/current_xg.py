@@ -39,15 +39,7 @@ def download_xg_baseline():
 
     url = "https://mcp.strikerapi.com/v1/get_team_stats"
 
-    response = requests.post(
-        url,
-        headers={"x-api-key": api_key.strip()},
-        json={
-            "season": 2026,
-            "league": "soccer",
-        },
-        timeout=30,
-    )
+    response = requests.post(url,headers={"x-api-key": api_key.strip()},json={"season": 2026,"league": "soccer",},timeout=30)
 
     response.raise_for_status()
 
@@ -61,9 +53,7 @@ def download_xg_baseline():
     teams["Team"] = teams["display_name"].replace(TEAM_MAP)
 
     # Keep only the data required for rolling xG features
-    teams = teams[
-        ["Team", "games", "xg_for", "xg_against"]
-    ].copy()
+    teams = teams[["Team", "games", "xg_for", "xg_against"]].copy()
 
     teams.columns = ["Team", "Matches", "XG", "XGA"]
 
@@ -79,7 +69,6 @@ def download_xg_baseline():
 
     # Compare teams against our current-season fixtures
     fixtures = pd.read_csv(RAW_DATA_DIR / "epl_2026_27.csv")
-
     fixture_teams = set(fixtures["HomeTeam"]) | set(fixtures["AwayTeam"])
     baseline_teams = set(teams["Team"])
 
@@ -90,19 +79,13 @@ def download_xg_baseline():
 
     # Baseline should represent the 100 completed EPL matches
     completed = fixtures[fixtures["Status"] == "FINISHED"]
-    appearances = pd.concat([
-        completed["HomeTeam"],
-        completed["AwayTeam"],
-    ]).value_counts()
+    appearances = pd.concat([completed["HomeTeam"],completed["AwayTeam"]]).value_counts()
 
     for _, team in teams.iterrows():
         expected_matches = appearances.get(team["Team"], 0)
 
         if team["Matches"] != expected_matches:
-            raise ValueError(
-                f"{team['Team']}: API reports {team['Matches']} matches, "
-                f"but EPL fixtures contain {expected_matches}"
-            )
+            raise ValueError(f"{team['Team']}: API reports {team['Matches']} matches, "f"but EPL fixtures contain {expected_matches}")
 
     # Save the initial baseline permanently
     teams = teams.sort_values("Team").reset_index(drop=True)

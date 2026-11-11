@@ -3,11 +3,7 @@ import numpy as np
 import pandas as pd
 
 from epl_predictor.config import PROCESSED_DATA_DIR
-from epl_predictor.team_dixon_coles import (
-    fit_team_model,
-    get_expected_goals,
-    predict_probabilities,
-)
+from epl_predictor.team_dixon_coles import fit_team_model,get_expected_goals,predict_probabilities
 
 
 RETRAIN_EVERY = 50
@@ -17,19 +13,17 @@ def evaluate(predictions):
     labels = np.array(["H", "D", "A"])
     probabilities = predictions[["HomeWin", "Draw", "AwayWin"]].to_numpy()
 
-    predicted = labels[np.argmax(probabilities, axis=1)]
-    actual = predictions["FTR"].to_numpy()
+    predicted = labels[np.argmax(probabilities, axis=1)] # finds outcome with highest prob, checking each match seperately
+    actual = predictions["FTR"].to_numpy() # actual result of match
 
-    accuracy = np.mean(predicted == actual)
+    accuracy = np.mean(predicted == actual) # percentage of matches predicted accurately
 
-    actual_ids = pd.Series(actual).map({
-        "H": 0,
-        "D": 1,
-        "A": 2,
-    }).to_numpy()
+    #convert match results into numeric positions
+    actual_ids = pd.Series(actual).map({"H": 0,"D": 1,"A": 2 }).to_numpy()
 
+    #select probability belonging to actual match result
     correct_probs = probabilities[np.arange(len(actual)), actual_ids]
-    log_loss = -np.log(np.clip(correct_probs, 1e-15, 1)).mean()
+    log_loss = -np.log(np.clip(correct_probs, 1e-15, 1)).mean() # Calc log loss
 
     return accuracy, log_loss
 
@@ -42,7 +36,7 @@ def main():
     seasons = sorted(data["Season"].unique())
     results = []
 
-    # Evaluate 2021-22 through 2025-26
+    # Evaluate 2021-22 through 2025-26 (walk-forward eval)
     for season in seasons:
         if season < "2021-22":
             continue
@@ -57,6 +51,7 @@ def main():
 
         start = 0
 
+        # Split season in blocks of ~50
         while start < len(test):
             end = min(start + RETRAIN_EVERY, len(test))
 
@@ -64,30 +59,21 @@ def main():
             while end < len(test) and test.loc[end, "Date"] == test.loc[end - 1, "Date"]:
                 end += 1
 
-            block = test.iloc[start:end]
-            cutoff = block.iloc[0]["Date"]
+            block = test.iloc[start:end] #matches we are about to predict
+            cutoff = block.iloc[0]["Date"] # date of first match in prediction block
 
-            # Previous 3 seasons plus current-season matches before this block
-            train = data[
-                data["Season"].isin(previous_seasons)
-                | (
-                    (data["Season"] == season)
-                    & (data["Date"] < cutoff)
-                )
-            ]
+            # Previous 3 seasons plus current-season matches before this block used to train
+            train = data[data["Season"].isin(previous_seasons)| ((data["Season"] == season)& (data["Date"] < cutoff) )]
 
-            model = fit_team_model(train)
+            model = fit_team_model(train) # New DC model using only past results
 
+            # Predict every fixture in curr block
             for _, match in block.iterrows():
-                home_xg, away_xg = get_expected_goals(
-                    model,
-                    match["HomeTeam"],
-                    match["AwayTeam"],
-                )
+                # Estimate XG for both teams
+                home_xg, away_xg = get_expected_goals(model,match["HomeTeam"],match["AwayTeam"])
 
-                probs = predict_probabilities(
-                    home_xg, away_xg, model["rho"]
-                )
+                # Convert XG to Probs
+                probs = predict_probabilities(home_xg, away_xg, model["rho"]) 
 
                 results.append({
                     "Season": season,
@@ -112,7 +98,6 @@ def main():
         print(f"Log Loss: {log_loss:.4f}")
 
     predictions = pd.DataFrame(results)
-
     output = PROCESSED_DATA_DIR / "dixon_coles_predictions.csv"
     predictions.to_csv(output, index=False)
 

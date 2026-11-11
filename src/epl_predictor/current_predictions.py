@@ -3,46 +3,24 @@ import joblib
 import numpy as np
 import pandas as pd
 
-from epl_predictor.config import (
-    RAW_DATA_DIR,
-    PROCESSED_DATA_DIR,
-    MODELS_DIR,
-)
+from epl_predictor.config import RAW_DATA_DIR,PROCESSED_DATA_DIR,MODELS_DIR
 from epl_predictor.elo_probs import predict_match
 from epl_predictor.lightgbm_model import train_model, FEATURES
-from epl_predictor.team_dixon_coles import (
-    fit_team_model,
-    get_expected_goals,
-    predict_probabilities,
-)
-
+from epl_predictor.team_dixon_coles import fit_team_model,get_expected_goals,predict_probabilities
 
 def generate_predictions():
     # Load historical training data and current fixtures
-    historical = pd.read_csv(
-        PROCESSED_DATA_DIR / "epl_features_with_elo.csv"
-    )
-
-    current = pd.read_csv(
-        RAW_DATA_DIR / "epl_2026_27.csv"
-    )
-
-    fixtures = pd.read_csv(
-        PROCESSED_DATA_DIR / "current_features.csv"
-    )
+    historical = pd.read_csv(PROCESSED_DATA_DIR / "epl_features_with_elo.csv")
+    current = pd.read_csv(RAW_DATA_DIR / "epl_2026_27.csv")
+    fixtures = pd.read_csv(PROCESSED_DATA_DIR / "current_features.csv") # upcoming fixtures w/ 13 features
 
     # 1. Train final LightGBM model
     train = historical.dropna(subset=FEATURES).copy()
-
-    lightgbm = train_model(train)
-
-    lgbm_probs = lightgbm.predict_proba(fixtures[FEATURES])
+    lightgbm = train_model(train) # train w/ all historical seasons
+    lgbm_probs = lightgbm.predict_proba(fixtures[FEATURES]) # predict for all upcoming fixtures
 
     # Reorder probabilities to Home, Draw, Away
-    class_ids = [
-        list(lightgbm.classes_).index(label)
-        for label in ["H", "D", "A"]
-    ]
+    class_ids = [list(lightgbm.classes_).index(label)for label in ["H", "D", "A"]]
 
     lgbm_probs = lgbm_probs[:, class_ids]
 
@@ -53,18 +31,13 @@ def generate_predictions():
     # 2. Train Dixon-Coles using recent completed matches
     previous_seasons = ["2023-24", "2024-25", "2025-26"]
 
-    dc_train = historical[
-        historical["Season"].isin(previous_seasons)
-    ].copy()
+    dc_train = historical[historical["Season"].isin(previous_seasons)].copy()
 
-    completed = current[current["Status"] == "FINISHED"]
+    completed = current[current["Status"] == "FINISHED"] # completed from curr season
 
-    dc_train = pd.concat([
-        dc_train,
-        completed,
-    ], ignore_index=True)
+    dc_train = pd.concat([dc_train,completed], ignore_index=True) # add completed to historical training
 
-    dc_model = fit_team_model(dc_train)
+    dc_model = fit_team_model(dc_train) # Train atk,def,home adv and rho
 
     # 3. Generate individual model probabilities
     elo_probs = []
@@ -74,22 +47,16 @@ def generate_predictions():
         home = match["HomeTeam"]
         away = match["AwayTeam"]
 
-        # Elo prediction
-        elo_probs.append(
-            predict_match(match["HomeElo"], match["AwayElo"])
-        )
+        # Elo prediction / Convert ratings into probs
+        elo_probs.append(predict_match(match["HomeElo"], match["AwayElo"]))
 
-        # Dixon-Coles prediction
-        home_xg, away_xg = get_expected_goals(
-            dc_model, home, away
-        )
+        # Dixon-Coles prediction / Calc xg for both teams based on fitted atk and def
+        home_xg, away_xg = get_expected_goals(dc_model, home, away)
 
-        dc_probs.append(
-            predict_probabilities(
-                home_xg, away_xg, dc_model["rho"]
-            )
-        )
+        # Convert xg into probs
+        dc_probs.append(predict_probabilities(home_xg, away_xg, dc_model["rho"]))
 
+    # Predictions into NumPy arrays
     elo_probs = np.array(elo_probs)
     dc_probs = np.array(dc_probs)
 
@@ -103,19 +70,17 @@ def generate_predictions():
         raise ValueError("Negative probabilities found")
 
     # 5. Save predictions
-    results = fixtures[
-        ["Date", "Kickoff", "HomeTeam", "AwayTeam"]
-    ].copy()
+    results = fixtures[["Date", "Kickoff", "HomeTeam", "AwayTeam"]].copy()
 
+    # add probs for each match
     results["HomeWin"] = ensemble_probs[:, 0]
     results["Draw"] = ensemble_probs[:, 1]
     results["AwayWin"] = ensemble_probs[:, 2]
 
     labels = np.array(["H", "D", "A"])
-    results["Prediction"] = labels[np.argmax(ensemble_probs, axis=1)]
-
+    results["Prediction"] = labels[np.argmax(ensemble_probs, axis=1)] # Highest prob outcome
     results = results.sort_values("Kickoff").reset_index(drop=True)
-
+    
     output = PROCESSED_DATA_DIR / "current_predictions.csv"
     results.to_csv(output, index=False)
 

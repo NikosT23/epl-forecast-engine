@@ -9,19 +9,11 @@ from epl_predictor.lightgbm_model import FEATURES
 
 def build_current_features():
     # Load historical data, current fixtures and frozen xG baseline
-    historical = pd.read_csv(
-        PROCESSED_DATA_DIR / "epl_matches_with_xg.csv"
-    )
+    historical = pd.read_csv(PROCESSED_DATA_DIR / "epl_matches_with_xg.csv")
+    current = pd.read_csv(RAW_DATA_DIR / "epl_2026_27.csv")
+    baseline = pd.read_csv(RAW_DATA_DIR / "current_xg_baseline.csv").set_index("Team")
 
-    current = pd.read_csv(
-        RAW_DATA_DIR / "epl_2026_27.csv"
-    )
-
-    baseline = pd.read_csv(
-        RAW_DATA_DIR / "current_xg_baseline.csv"
-    ).set_index("Team")
-
-    current["Kickoff"] = pd.to_datetime(current["Kickoff"], utc=True)
+    current["Kickoff"] = pd.to_datetime(current["Kickoff"], utc=True) # Kickoff time to DateTime
 
     completed = current[current["Status"] == "FINISHED"].copy()
     upcoming = current[current["Status"] != "FINISHED"].copy()
@@ -30,26 +22,19 @@ def build_current_features():
         raise ValueError("Completed matches have missing scores")
 
     # Update Elo using all historical and current completed matches
-    elo_columns = [
-        "Season", "Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG"
-    ]
+    elo_columns = ["Season", "Date", "HomeTeam", "AwayTeam", "FTHG", "FTAG"]
 
-    elo_matches = pd.concat([
-        historical[elo_columns],
-        completed[elo_columns],
-    ], ignore_index=True)
+    # Combine historical w/ completed of curr season to reflect latest
+    elo_matches = pd.concat([historical[elo_columns],completed[elo_columns]], ignore_index=True)
 
+    # Elo calc again w/ new
     _, ratings = calculate_elo(elo_matches)
 
     # Build team match history for points and goals
-    home = completed[
-        ["Kickoff", "HomeTeam", "FTHG", "FTAG"]
-    ].copy()
+    home = completed[["Kickoff", "HomeTeam", "FTHG", "FTAG"]].copy()
     home.columns = ["Kickoff", "Team", "Goals", "Conceded"]
 
-    away = completed[
-        ["Kickoff", "AwayTeam", "FTAG", "FTHG"]
-    ].copy()
+    away = completed[["Kickoff", "AwayTeam", "FTAG", "FTHG"]].copy()
     away.columns = ["Kickoff", "Team", "Goals", "Conceded"]
 
     teams = pd.concat([home, away], ignore_index=True)
@@ -62,13 +47,14 @@ def build_current_features():
 
     team_form = {}
 
+    # Stats for last 5
     for team, games in teams.groupby("Team"):
         last_five = games.tail(5)
 
         team_form[team] = {
             "Points5": last_five["Points"].mean(),
             "Goals5": last_five["Goals"].mean(),
-            "Conceded5": last_five["Conceded"].mean(),
+            "Conceded5": last_five["Conceded"].mean()
         }
 
     # Load actual match-level xG collected after the baseline
@@ -87,13 +73,7 @@ def build_current_features():
                 raise ValueError("Duplicate match-level xG records")
 
             # Only use xG for verified completed fixtures
-            checked = xg_matches.merge(
-                completed[keys],
-                on=keys,
-                how="left",
-                indicator=True,
-                validate="one_to_one",
-            )
+            checked = xg_matches.merge(completed[keys],on=keys,how="left",indicator=True,validate="one_to_one")
 
             if (checked["_merge"] != "both").any():
                 raise ValueError("xG contains an unmatched fixture")
@@ -105,32 +85,22 @@ def build_current_features():
                 raise ValueError("Negative xG values found")
 
             # Convert match xG into individual team performances
-            xg_home = xg_matches[
-                ["Date", "HomeTeam", "HomeXG", "AwayXG"]
-            ].copy()
+            xg_home = xg_matches[["Date", "HomeTeam", "HomeXG", "AwayXG"]].copy()
             xg_home.columns = ["Date", "Team", "XG", "XGA"]
 
-            xg_away = xg_matches[
-                ["Date", "AwayTeam", "AwayXG", "HomeXG"]
-            ].copy()
+            xg_away = xg_matches[["Date", "AwayTeam", "AwayXG", "HomeXG"]].copy()
             xg_away.columns = ["Date", "Team", "XG", "XGA"]
 
-            xg_teams = pd.concat(
-                [xg_home, xg_away],
-                ignore_index=True,
-            )
-
+            xg_teams = pd.concat([xg_home, xg_away],ignore_index=True)
             xg_teams = xg_teams.sort_values("Date")
 
+            # Calc new rolling xG AFTER we have gathered the 5 match window
             for team, games in xg_teams.groupby("Team"):
                 # Switch only when five actual xG matches are available
                 if len(games) >= 5:
                     last_five = games.tail(5)
 
-                    team_xg[team] = {
-                        "XG5": last_five["XG"].mean(),
-                        "XGA5": last_five["XGA"].mean(),
-                    }
+                    team_xg[team] = {"XG5": last_five["XG"].mean(),"XGA5": last_five["XGA"].mean()}
 
                     actual_xg_teams += 1
 
@@ -141,12 +111,15 @@ def build_current_features():
         home_team = match["HomeTeam"]
         away_team = match["AwayTeam"]
 
+        # Both teams have at least one match on record
         if home_team not in team_form or away_team not in team_form:
             raise ValueError("Missing match history for a team")
 
+        # Both teams have baseline xg
         if home_team not in baseline.index or away_team not in baseline.index:
             raise ValueError("Missing xG baseline for a team")
 
+        # Latest elo
         home_elo = ratings[home_team]
         away_elo = ratings[away_team]
 
@@ -158,29 +131,16 @@ def build_current_features():
             row[f"Away{stat}"] = team_form[away_team][stat]
 
         # Frozen baseline or genuine rolling-five xG
-        row["HomeXG5"] = (
-            team_xg[home_team]["XG5"]
-            if home_team in team_xg
-            else baseline.loc[home_team, "XG"]
-        )
+        # Use rolling xG if available, otherwise use the baseline
+        for team, side in [(home_team, "Home"), (away_team, "Away")]:
 
-        row["HomeXGA5"] = (
-            team_xg[home_team]["XGA5"]
-            if home_team in team_xg
-            else baseline.loc[home_team, "XGA"]
-        )
+            if team in team_xg:
+                row[f"{side}XG5"] = team_xg[team]["XG5"]
+                row[f"{side}XGA5"] = team_xg[team]["XGA5"]
 
-        row["AwayXG5"] = (
-            team_xg[away_team]["XG5"]
-            if away_team in team_xg
-            else baseline.loc[away_team, "XG"]
-        )
-
-        row["AwayXGA5"] = (
-            team_xg[away_team]["XGA5"]
-            if away_team in team_xg
-            else baseline.loc[away_team, "XGA"]
-        )
+            else:
+                row[f"{side}XG5"] = baseline.loc[team, "XG"]
+                row[f"{side}XGA5"] = baseline.loc[team, "XGA"]
 
         # Updated Elo ratings
         row["HomeElo"] = home_elo

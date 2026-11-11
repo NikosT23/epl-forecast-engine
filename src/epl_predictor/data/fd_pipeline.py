@@ -9,10 +9,10 @@ def validate_season(df, season):
     if len(df) != 380:
         raise ValueError(f"{season}: Expected 380 matches, found {len(df)}")
 
-    if df["Season"].nunique() != 1 or df["Season"].iloc[0] != season:
+    if not (df['Season'] == season).all():
         raise ValueError(f"{season}: Incorrect season label")
 
-    teams = set(df["HomeTeam"]) | set(df["AwayTeam"])
+    teams = set(df["HomeTeam"]) | set(df["AwayTeam"]) # Remove duplicates and combine sets
 
     if len(teams) != 20:
         raise ValueError(f"{season}: Expected 20 teams, found {len(teams)}")
@@ -34,7 +34,7 @@ def build_historical_dataset():
         season = f"{year}-{str(year + 1)[-2:]}" #2014-15, 2015-16, ..., 2025-26
         file_path = RAW_DATA_DIR / f"EPL_{season}.csv"
 
-        # Read and clean one season
+        # Load season, assign label and clean
         df = pd.read_csv(file_path)
         df["Season"] = season
         df = clean_matches(df)
@@ -46,20 +46,11 @@ def build_historical_dataset():
 
         print(f"{season}: {len(df)} matches")
 
-    # Combine all 12 seasons
+    # Combine all 12 season dfs into a dataset
     combined = pd.concat(all_matches, ignore_index=True)
-
-    combined = combined.sort_values(
-        ["Date", "HomeTeam", "AwayTeam"]
-    ).reset_index(drop=True)
-
+    combined = combined.sort_values(["Date", "HomeTeam", "AwayTeam"]).reset_index(drop=True)
     output_path = PROCESSED_DATA_DIR / "epl_matches_2014_2026.csv"
-
-    combined.to_csv(
-        output_path,
-        index=False,
-        date_format="%Y-%m-%d",
-    )
+    combined.to_csv(output_path,index=False,date_format="%Y-%m-%d")
 
     print("\nHistorical dataset successfully created!")
     print(f"Seasons: {combined['Season'].nunique()}")

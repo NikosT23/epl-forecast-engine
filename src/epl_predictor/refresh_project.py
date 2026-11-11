@@ -8,10 +8,11 @@ from epl_predictor.current_features import build_current_features
 from epl_predictor.current_predictions import generate_predictions
 from epl_predictor.season_simulation import simulate_season
 
-BASELINE_DATE = "2026-11-09"
+BASELINE_DATE = "2026-11-09" # Earlier data is covered by our frozen baseline
 
 
 def refresh_project():
+    # Download latest results, fixtures and status
     print("\n1. Updating current-season results and fixtures")
     download_current_season()
 
@@ -20,39 +21,31 @@ def refresh_project():
 
     # Don't generate new predictions with missing weekly xG
     fixtures = pd.read_csv(RAW_DATA_DIR / "epl_2026_27.csv")
-
-    completed = fixtures[
-        (fixtures["Status"] == "FINISHED")
-        & (fixtures["Date"] > BASELINE_DATE)
-    ]
+    completed = fixtures[(fixtures["Status"] == "FINISHED")& (fixtures["Date"] > BASELINE_DATE)]
 
     xg_path = RAW_DATA_DIR / "current_match_xg.csv"
 
+    # Check xg only if there are new completed matches
     if not completed.empty:
         if not xg_path.exists():
             raise ValueError("Missing current match-level xG data")
 
         xg = pd.read_csv(xg_path)
 
-        missing = completed.merge(
-            xg[["Date", "HomeTeam", "AwayTeam"]],
-            on=["Date", "HomeTeam", "AwayTeam"],
-            how="left",
-            indicator=True,
-            validate="one_to_one",
-        )
+        # Match completed to saved xg records
+        missing = completed.merge(xg[["Date", "HomeTeam", "AwayTeam"]],on=["Date", "HomeTeam", "AwayTeam"],how="left",indicator=True,validate="one_to_one")
 
         if (missing["_merge"] != "both").any():
             raise ValueError("Some completed matches are missing xG")
 
     print("\n3. Updating rolling features and Elo ratings")
-    build_current_features()
+    build_current_features() # Recalc 13 prediction features w/ updated results
 
     print("\n4. Training models and generating predictions")
-    generate_predictions()
+    generate_predictions() # Train LGBM and DC models and combine probs w/ elo 
 
     print("\n5. Simulating the remaining Premier League season")
-    simulate_season()
+    simulate_season() # Simulate remaining fixt w/ updated predictions
     
     print("\nWeekly refresh completed successfully!")
 

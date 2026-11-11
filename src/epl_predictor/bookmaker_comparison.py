@@ -11,55 +11,39 @@ PROBS = ["HomeWin", "Draw", "AwayWin"]
 def evaluate(probs, actual):
     labels = np.array(["H", "D", "A"])
 
-    predicted = labels[np.argmax(probs, axis=1)]
+    predicted = labels[np.argmax(probs, axis=1)] # highest prob outcome
     accuracy = np.mean(predicted == actual)
 
-    actual_ids = pd.Series(actual).map({
-        "H": 0,
-        "D": 1,
-        "A": 2,
-    }).to_numpy()
+    actual_ids = pd.Series(actual).map({"H": 0,"D": 1,"A": 2}).to_numpy()
 
-    correct_probs = probs[np.arange(len(actual)), actual_ids]
+    correct_probs = probs[np.arange(len(actual)), actual_ids] # prob of actual result
     log_loss = -np.log(np.clip(correct_probs, 1e-15, 1)).mean()
 
     return accuracy, log_loss
 
 
 def main():
-    matches = pd.read_csv(
-        PROCESSED_DATA_DIR / "epl_features_with_elo.csv"
-    )
-
-    ensemble = pd.read_csv(
-        PROCESSED_DATA_DIR / "ensemble_predictions.csv"
-    )
-
+    matches = pd.read_csv(PROCESSED_DATA_DIR / "epl_features_with_elo.csv")
+    ensemble = pd.read_csv(PROCESSED_DATA_DIR / "ensemble_predictions.csv")
     keys = ["Season", "Date", "HomeTeam", "AwayTeam"]
 
     # Merge bookmaker odds with our historical predictions
-    data = ensemble.merge(
-        matches[keys + ["B365H", "B365D", "B365A"]],
-        on=keys,
-        how="left",
-        validate="one_to_one",
-    )
+    data = ensemble.merge(matches[keys + ["B365H", "B365D", "B365A"]],on=keys,how="left",validate="one_to_one")
 
-    # Remove matches with unavailable or invalid odds
+    # odds to numbers, invalid = NaN
     odds = ["B365H", "B365D", "B365A"]
-
     for col in odds:
         data[col] = pd.to_numeric(data[col], errors="coerce")
 
-    valid = data[odds].notna().all(axis=1)
-    valid &= (data[odds] > 1).all(axis=1)
+    valid = data[odds].notna().all(axis=1) # all odds available?
+    valid &= (data[odds] > 1).all(axis=1) # all odds > 1?
 
-    data = data[valid].copy()
+    data = data[valid].copy() # keep valid matches
 
     if data.empty:
         raise ValueError("No matches have valid Bet365 odds")
 
-    # Decimal odds -> implied probabilities
+    # Decimal odds -> implied probabilities (2.0 becomes 50%)
     bookmaker_probs = 1 / data[odds].to_numpy()
 
     # Normalize to remove the bookmaker's margin
@@ -72,27 +56,21 @@ def main():
     print(f"Matches with valid odds: {len(data)}")
 
     # Evaluate both models on exactly the same matches
-    for name, subset in [
-        ("VALIDATION 2021-25", data[data["Season"] <= "2024-25"]),
-        ("EVALUATION 2025-26", data[data["Season"] == "2025-26"]),
-        ("OVERALL", data),
-    ]:
+    for name, subset in [("VALIDATION 2021-25", data[data["Season"] <= "2024-25"]),("EVALUATION 2025-26", data[data["Season"] == "2025-26"]),("OVERALL", data)]:
         print(f"\n{name} ({len(subset)} matches)")
 
         if subset.empty:
             continue
 
-        actual = subset["FTR"].to_numpy()
+        actual = subset["FTR"].to_numpy() # actual results
 
-        ensemble_probs = subset[PROBS].to_numpy()
-        market_probs = subset[
-            ["BookmakerHome", "BookmakerDraw", "BookmakerAway"]
-        ].to_numpy()
+        ensemble_probs = subset[PROBS].to_numpy() # our probs
 
-        for model_name, probs in [
-            ("Ensemble", ensemble_probs),
-            ("Bet365", market_probs),
-        ]:
+        # normalized BET probs
+        market_probs = subset[["BookmakerHome", "BookmakerDraw", "BookmakerAway"]].to_numpy()
+
+        # eval both models using same matches and metrics
+        for model_name, probs in [("Ensemble", ensemble_probs),("Bet365", market_probs)]:
             accuracy, log_loss = evaluate(probs, actual)
 
             print(

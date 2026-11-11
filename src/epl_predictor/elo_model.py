@@ -32,9 +32,9 @@ def update_ratings(home_elo, away_elo, home_goals, away_goals):
     if margin <= 1:
         multiplier = 1
     else:
-        multiplier = min(2, 1 + 0.25 * (margin - 1)) 
+        multiplier = min(2, 1 + 0.25 * (margin - 1)) # increase by 0.25 for each goal BUT never exceed 2
 
-    change = K * multiplier * (actual - expected)
+    change = K * multiplier * (actual - expected) # if actual>expected then home gains elo, otherwise home loses elo
 
     return home_elo + change, away_elo - change
 
@@ -43,13 +43,11 @@ def calculate_elo(matches):
     matches = matches.copy()
     matches["Date"] = pd.to_datetime(matches["Date"])
 
-    matches = matches.sort_values(
-        ["Date", "HomeTeam", "AwayTeam"]
-    ).reset_index(drop=True)
+    matches = matches.sort_values(["Date", "HomeTeam", "AwayTeam"]).reset_index(drop=True)
 
-    ratings = {}
-    home_ratings = []
-    away_ratings = []
+    ratings = {} # stores current elo
+    home_ratings = [] # elo before match
+    away_ratings = [] # elo before match
 
     previous_season = None
 
@@ -60,10 +58,7 @@ def calculate_elo(matches):
         # Move Elo ratings 10% towards 1500 between seasons
         if previous_season is not None and season != previous_season:
             for team in ratings:
-                ratings[team] = (
-                    ratings[team] * (1 - SEASON_REGRESSION)
-                    + START_ELO * SEASON_REGRESSION
-                )
+                ratings[team] = (ratings[team] * (1 - SEASON_REGRESSION)+ START_ELO * SEASON_REGRESSION)
 
         previous_season = season
         changes = {}
@@ -73,18 +68,14 @@ def calculate_elo(matches):
             home = match["HomeTeam"]
             away = match["AwayTeam"]
 
+            # if team is new assign starting 1500
             home_elo = ratings.get(home, START_ELO)
             away_elo = ratings.get(away, START_ELO)
 
             home_ratings.append(home_elo)
             away_ratings.append(away_elo)
 
-            new_home, new_away = update_ratings(
-                home_elo,
-                away_elo,
-                match["FTHG"],
-                match["FTAG"],
-            )
+            new_home, new_away = update_ratings(home_elo,away_elo,match["FTHG"],match["FTAG"])
 
             changes[home] = changes.get(home, 0) + new_home - home_elo
             changes[away] = changes.get(away, 0) + new_away - away_elo
@@ -95,7 +86,7 @@ def calculate_elo(matches):
 
     matches["HomeElo"] = home_ratings
     matches["AwayElo"] = away_ratings
-    matches["EloDifference"] = matches["HomeElo"] - matches["AwayElo"]
+    matches["EloDifference"] = matches["HomeElo"] - matches["AwayElo"] # Lightgbm feature
 
     return matches, ratings
 

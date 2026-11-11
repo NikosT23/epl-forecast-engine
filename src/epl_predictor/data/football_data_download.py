@@ -1,11 +1,9 @@
-from pathlib import Path
+
 import pandas as pd
 from epl_predictor.config import RAW_DATA_DIR
 
 BASE_URL = "https://www.football-data.co.uk/mmz4281/{}/E0.csv"
 
-RAW_DATA_DIR = Path("data/raw")
-RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 SEASONS = {
     "2014-15": "1415",

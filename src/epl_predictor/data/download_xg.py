@@ -8,13 +8,16 @@ from epl_predictor.config import RAW_DATA_DIR
 def download_xg():
     all_matches = []
 
-    with UnderstatClient() as understat:
+    with UnderstatClient() as understat: # Understat client to retrieve data
         for year in range(2014,2026):
             season = f"{year}-{str(year + 1)[-2:]}"
             print(f"Downloading Understat season {season}...") 
             matches = understat.league(league="EPL").get_match_data(season=str(year))
 
-            completed = [match for match in matches if match.get("isResult")]
+            completed = []
+            for match in matches:
+                if match.get('isResult'):
+                    completed.append(match)
 
             if len(completed) != 380:
                 print(f"WARNING: Expected 380 matches for season {year}, but got {len(completed)}")
@@ -34,7 +37,7 @@ def download_xg():
 
             print(f"Downloaded {len(completed)} completed matches for season {year}/{str(year + 1)[-2:]}")
 
-    df = pd.DataFrame(all_matches)
+    df = pd.DataFrame(all_matches) #convert all_matches dict into df
 
     df["DateTime"] = pd.to_datetime(df["DateTime"])
     df["Date"] = df["DateTime"].dt.strftime("%Y-%m-%d")

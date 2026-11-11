@@ -5,7 +5,7 @@ from lightgbm import LGBMClassifier
 
 from epl_predictor.config import PROCESSED_DATA_DIR
 
-
+# Our 13 LGBM features
 FEATURES = [
     "HomePoints5", "AwayPoints5",
     "HomeGoals5", "AwayGoals5",
@@ -17,27 +17,27 @@ FEATURES = [
 
 
 def train_model(train):
+    #Build LGBM model that predicts 3 outcomes
     model = LGBMClassifier(
         objective="multiclass",
-        n_estimators=100,
-        learning_rate=0.03,
-        num_leaves=7,
-        max_depth=3,
-        min_child_samples=50,
-        reg_lambda=2,
-        random_state=42,
-        verbosity=-1,
-        n_jobs=1,
+        n_estimators=100, # 100 decision trees
+        learning_rate=0.03, # Each new tree contribution 
+        num_leaves=7, # max leaves per tree
+        max_depth=3, # depth of each tree
+        min_child_samples=50, # min num of train samples in a leaf to prevet overfitting
+        reg_lambda=2, # L2 regularization
+        random_state=42, #Fixed seed
+        verbosity=-1, # Hide train messages
+        n_jobs=1, # CPU threads
     )
 
+    # Train using 13 features as X and FTR as Y
     model.fit(train[FEATURES], train["FTR"])
     return model
 
 
 def evaluate_model():
-    data = pd.read_csv(
-        PROCESSED_DATA_DIR / "epl_features_with_elo.csv"
-    )
+    data = pd.read_csv( PROCESSED_DATA_DIR / "epl_features_with_elo.csv")
 
     # Remove matches without complete rolling statistics
     data = data.dropna(subset=FEATURES).copy()
@@ -45,26 +45,26 @@ def evaluate_model():
     seasons = sorted(data["Season"].unique())
     results = []
 
+    # Walk forward eval
     for season in seasons:
         if season < "2021-22":
             continue
 
-        # Train on all earlier seasons
+        # Train on all earlier seasons than current test season
         train = data[data["Season"] < season]
         test = data[data["Season"] == season]
 
-        model = train_model(train)
+        model = train_model(train) # Train new model for this eval season
 
-        # LightGBM returns probabilities in alphabetical class order
+        # Returns one prob per class
         raw_probs = model.predict_proba(test[FEATURES])
 
-        class_ids = [
-            list(model.classes_).index(label)
-            for label in ["H", "D", "A"]
-        ]
+        # LightGBM returns probabilities in alphabetical class order but we need in H-D-A
+        class_ids = [list(model.classes_).index(label)for label in ["H", "D", "A"]]
 
-        probs = raw_probs[:, class_ids]
+        probs = raw_probs[:, class_ids] # Rearrange cols into H-D-A
 
+        # Save individual predictions for each test match
         for i, (_, match) in enumerate(test.iterrows()):
             results.append({
                 "Season": season,
@@ -77,17 +77,15 @@ def evaluate_model():
                 "AwayWin": probs[i, 2],
             })
 
-        # Evaluate this season
+        # Evaluate this season, find most likely result
         predicted = np.array(["H", "D", "A"])[np.argmax(probs, axis=1)]
-        actual = test["FTR"].to_numpy()
+        actual = test["FTR"].to_numpy() # actual outcome
 
         accuracy = np.mean(predicted == actual)
 
-        actual_ids = pd.Series(actual).map({
-            "H": 0, "D": 1, "A": 2
-        }).to_numpy()
+        actual_ids = pd.Series(actual).map({"H": 0, "D": 1, "A": 2}).to_numpy()
 
-        correct_probs = probs[np.arange(len(test)), actual_ids]
+        correct_probs = probs[np.arange(len(test)), actual_ids] # prob of actual result
         log_loss = -np.log(np.clip(correct_probs, 1e-15, 1)).mean()
 
         print(f"\n{season}")
@@ -97,7 +95,6 @@ def evaluate_model():
         print(f"Log Loss: {log_loss:.4f}")
 
     predictions = pd.DataFrame(results)
-
     output = PROCESSED_DATA_DIR / "lightgbm_predictions.csv"
     predictions.to_csv(output, index=False)
 
@@ -105,16 +102,12 @@ def evaluate_model():
     probs = predictions[["HomeWin", "Draw", "AwayWin"]].to_numpy()
     actual = predictions["FTR"].to_numpy()
 
-    predicted = np.array(["H", "D", "A"])[np.argmax(probs, axis=1)]
+    predicted = np.array(["H", "D", "A"])[np.argmax(probs, axis=1)] # Most likely outcome for each match
     accuracy = np.mean(predicted == actual)
 
-    actual_ids = pd.Series(actual).map({
-        "H": 0, "D": 1, "A": 2
-    }).to_numpy()
+    actual_ids = pd.Series(actual).map({"H": 0, "D": 1, "A": 2}).to_numpy()
 
-    log_loss = -np.log(
-        np.clip(probs[np.arange(len(actual)), actual_ids], 1e-15, 1)
-    ).mean()
+    log_loss = -np.log(np.clip(probs[np.arange(len(actual)), actual_ids], 1e-15, 1)).mean()
 
     print("\nOverall results:")
     print(f"Matches: {len(predictions)}")

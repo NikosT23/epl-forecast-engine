@@ -33,23 +33,23 @@ def build_features():
 
     for stat in stats:
         previous = teams.groupby("Team")[stat].shift(1)
-
-        teams[f"{stat}5"] = (
-            previous.groupby(teams["Team"])
-            .rolling(5, min_periods=1)
-            .mean()
-            .reset_index(level=0, drop=True)
-        )
+        teams[f"{stat}5"] = (previous.groupby(teams["Team"]).rolling(5, min_periods=1).mean().reset_index(level=0, drop=True))
 
     # Prepare home and away features
     features = stats
 
-    home_features = teams[['Date', 'Team'] + [f'{stat}5' for stat in features]].copy()
-    away_features = teams[['Date', 'Team'] + [f'{stat}5' for stat in features]].copy()
+    # Create separate tables with dates and team names
+    home_features = teams[["Date", "Team"]].copy()
+    away_features = teams[["Date", "Team"]].copy()
 
-    home_features.columns = ['Date', 'HomeTeam'] + [f'Home{stat}5' for stat in features]
-    away_features.columns = ['Date', 'AwayTeam'] + [f'Away{stat}5' for stat in features]
+    # Rename team columns for merging
+    home_features = home_features.rename(columns={"Team": "HomeTeam"})
+    away_features = away_features.rename(columns={"Team": "AwayTeam"})
 
+    # Add the rolling statistics with home/away prefixes
+    for stat in stats:
+        home_features[f"Home{stat}5"] = teams[f"{stat}5"]
+        away_features[f"Away{stat}5"] = teams[f"{stat}5"]
     # Merge features with original matches
     
     df = df.merge(home_features, on=['Date', 'HomeTeam'], how='left')

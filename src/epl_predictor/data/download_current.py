@@ -2,7 +2,6 @@
 import os
 import pandas as pd
 import requests
-
 from dotenv import load_dotenv
 from epl_predictor.config import RAW_DATA_DIR
 
@@ -46,12 +45,7 @@ def download_current_season():
 
     url = "https://api.football-data.org/v4/competitions/PL/matches"
 
-    response = requests.get(
-        url,
-        headers={"X-Auth-Token": api_key},
-        params={"season": 2026},
-        timeout=30,
-    )
+    response = requests.get(url,headers={"X-Auth-Token": api_key},params={"season": 2026},timeout=30)
 
     response.raise_for_status()
     matches = response.json()["matches"]
