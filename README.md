@@ -227,8 +227,6 @@ Potential extensions include:
 
 ## System Architecture
 
-## System Architecture
-
 ```mermaid
 flowchart TD
     A["Football-Data.co.uk: Historical Results"]
