@@ -1,4 +1,4 @@
-# ⚽ EPL Forecast Engine
+# ⚽ EPL Forecast Engine | Version3
 
 A Dockerized, end-to-end machine learning application for predicting English Premier League match outcomes and simulating final league standings.
 
@@ -6,7 +6,7 @@ The project combines **Elo ratings, Dixon–Coles statistical modeling, and Ligh
 
 It also uses **10,000 Monte Carlo simulations** to estimate final league positions, expected points, title probabilities, top-four finishes, and relegation risks.
 
-**[🚀 Live Application](https://epl-forecast-engine.onrender.com/)**
+**[Live Application](https://epl-forecast-engine.onrender.com/)**
 
 ## Features
 
@@ -20,7 +20,7 @@ It also uses **10,000 Monte Carlo simulations** to estimate final league positio
 
 ## Machine Learning Architecture
 
-The prediction engine combines three complementary modeling approaches.
+The prediction engine combines three modeling approaches.
 
 ### 1. Elo Rating Model
 
@@ -92,7 +92,7 @@ The ensemble is compared against Bet365 implied probabilities after normalizing 
 | 2025–26 | Ensemble | 48.16% | 1.0298 |
 | 2025–26 | Bet365 | 48.95% | 1.0185 |
 
-These metrics are from the project's historical evaluation runs. The bookmaker baseline outperforms the ensemble over these periods.
+These metrics are from the project's historical evaluation runs.
 
 The 2025–26 evaluation is reported separately, but should not be interpreted as a completely untouched holdout because model-development decisions were also informed by results from that season.
 
@@ -108,7 +108,7 @@ The 2025–26 evaluation is reported separately, but should not be interpreted a
 
 Historical and current-season xG sources differ. Current predictions initially use a frozen team-level xG baseline, switching to rolling five-match xG after sufficient new match observations have been collected.
 
-## Technology Stack
+## Tech Stack
 
 | Category | Technologies |
 |---|---|
@@ -207,7 +207,7 @@ Render is configured to deploy automatically when changes are pushed to the repo
 
 - Match predictions represent estimated probabilities, not guaranteed outcomes.
 - The ensemble assigns equal weights to all three models.
-- Current-season xG uses a different provider from historical training xG.
+- Current-season xG uses a different provider (StrikerApi) from historical training xG (Understat), due to constant outages encountered with Understat's website while development was underway.
 - Season simulations use fixed fixture probabilities rather than dynamically updating predictions after simulated matches.
 - Projected league standings approximate certain official tie-breaking rules.
 - Historical performance is not evidence of guaranteed future prediction accuracy.
@@ -218,7 +218,7 @@ Potential extensions include:
 
 - Probability calibration and reliability analysis
 - Comparing optimized ensemble weights against equal weighting
-- Incorporating additional injury or squad information
+- Incorporating additional squad information
 - Monitoring model drift and performance throughout the season
 - Improving cross-provider consistency for expected-goals data
 - Extending automated data-quality checks
@@ -275,7 +275,33 @@ flowchart TD
     N --> O
 ```
 
+## Version1 & Version2 Retrospective
+### Version1 - Initial Prototype
+- Data Engineering: Experimented with data pipelines, historical data collection, preprocessing, and cleaning.
 
+- Model Research: Explored different statistical and machine learning approaches for predicting football matches.
+
+- Streamlit: Developed familiarity with building interactive interfaces for displaying predictions.
+
+- Model Evaluation: Introduced performance metrics and experimented with improving prediction accuracy.
+
+### Version2 - Research & Experimentation
+- Feature Engineering: Developed rolling five-match performance statistics, incorporating historical results, goals, and expected goals (xG).
+
+- Elo Optimization: Tested different K-factors, home advantages, goal-margin adjustments, and seasonal regression rates.
+
+- Statistical Modeling: Experimented with Poisson and Dixon–Coles models to improve goal distributions and home/draw/away probabilities.
+
+- LightGBM: Trained gradient-boosted classifiers and evaluated the impact of additional features on predictive performance.
+
+- Model Evaluation: Implemented chronological walk-forward validation and compared predictions against Bet365 implied probabilities using accuracy, log loss, and Brier score.
+
+- Ensemble Experiments: Combined prediction models, tested different weighting strategies, and compared performance.
+
+
+### Transition to Version3
+
+The experimentation and research conducted in V1 and V2 laid the foundation for the current version. The focus shifted from model development and predictive performance evaluation to building a complete end-to-end ML application, emphasizing automation, deployment, maintainability and public accessibility. The goal was to create a fully functional forecasting system that could be explored, evaluated and built upon at any time.
 
 **Live application:** https://epl-forecast-engine.onrender.com/
 
