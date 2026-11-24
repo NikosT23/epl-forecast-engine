@@ -77,3 +77,11 @@ jobs:
           else
             echo "No data changes to commit"
           fi
+      - name: Deploy updated predictions to Render
+        if: success()
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          curl --fail --silent --show-error \
+            --request POST \
+            "$RENDER_DEPLOY_HOOK_URL"
